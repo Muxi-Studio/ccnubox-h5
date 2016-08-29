@@ -34,7 +34,7 @@
     .sword_2 {
         width: x_size(106);
         top: y_size(296);
-        left: x_size(-106); 
+        left: x_size(-406); 
     }
     .knife {
         width: x_size(119);
@@ -92,7 +92,7 @@
     @keyframes sword_2_in {
         0% {
             top: y_size(296);
-            left: x_size(-106);
+            left: x_size(-406);
         }
         100% {
             top: y_size(496);

@@ -12,6 +12,10 @@ eliminate animation flash screen
     transform-style: preserve-3d;
     backface-visibility:hidden;
 }
+.main {
+     max-width: 500px;
+     overflow: hidden;
+}
 .header {
     width: x_size(490);
     height: y_size(77);
@@ -25,10 +29,6 @@ eliminate animation flash screen
 .page_bottom_cont {
     height: y_size(80);
     margin-top: y_size(-5);
-}
-.page_item {
-    width: 100%;
-    overflow: hidden;
 }
 .page {
     position: relative;
