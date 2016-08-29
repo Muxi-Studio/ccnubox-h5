@@ -9,6 +9,16 @@
 @function y_size($size_y) {
     @return ($size_y / 1136)*100%;
 }
+@media screen and (min-width: 500px) {
+    .certificate span {
+        line-height: 300%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .certificate span {
+        line-height: 200%;
+    }
+}
 .certificate {
 	height: 100%;
 	height: 100vh;
@@ -45,9 +55,8 @@
 		left: x_size(197);
 		text-align: center;
 		font-weight: bold;
-		line-height: y_size(76);
 		color: rgb(0, 0, 0);
-		font-size: y_size(40);
+		font-size: 40px;
 	}
 	.l_hurt_cont {
 		background:transparent url('../images/l_hurt-min.png') center no-repeat;
@@ -129,6 +138,7 @@
 	span {
 		display: inline-block;
 		width: 4em;
+		font-size: 60%;
 		white-space: nowrap;
 		overflow: hidden;
 		border-right: .05em solid transparent;
