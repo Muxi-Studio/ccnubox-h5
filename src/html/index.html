@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<html lang="zh-cmn-Hans">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<!-- uc强制竖屏 -->
+	<meta name="screen-orientation" content="portrait">
+	<!-- QQ强制竖屏 -->
+	<meta name="x5-orientation" content="portrait">
+	<!-- UC强制全屏 -->
+	<meta name="full-screen" content="yes">
+	<!-- QQ强制全屏 -->
+	<meta name="x5-fullscreen" content="true">
+	<!-- UC应用模式 -->
+	<meta name="browsermode" content="application">
+	<!-- QQ应用模式 -->
+	<meta name="x5-page-mode" content="app">
+	<!-- 适应移动端end -->
+	<title>华师匣子</title>
+	<link rel="stylesheet" type="text/css" href="./css/main.css">
+	<script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.js"></script>
+</head>
+<body>
+	<div class="main">
+		<div v-bind:class="show[0]" class="hurt page_item">
+			<div class="body_cont">
+				<img src="./images/body-min.png">
+			</div>
+			<div class="hand_cont">
+				<img src="./images/hand-min.png">
+			</div>
+			<div class="hp_cont">
+				<img src="./images/hp_empty-min.png">
+			</div>
+			<div class="hp_bg">
+				<div class="js_progress bg"></div>
+			</div>
+			<div class="hp_fill_cont">
+				<img src="./images/hp_fill-min.png">
+			</div>
+		</div>
+		<div v-bind:class="show[1]" class="index page_item">
+			<div class="header margin_auto">
+				<img src="./images/xianquan-min.png">
+			</div>
+			<div class="test_cont">
+				<div class="test">
+					<img src="./images/test-min.png">
+				</div>
+				<div class="sword_1">
+					<img src="./images/sword_1-min.png">
+				</div>
+				<div class="sword_2">
+					<img src="./images/sword_2-min.png">
+				</div>
+				<div class="knife">
+					<img src="./images/knife-min.png">
+				</div>
+				<div class="idont">
+					<img src="./images/idont-min.png">
+				</div>
+			</div>	
+			<div @click="next(1)" class="enter">
+				<img src="./images/enter-min.png">
+			</div>
+		</div>
+		<div  v-bind:class="show[2]" class="card page_item">
+			<div class="page">
+				<div class="header margin_auto">
+					<img src="./images/xianquan-min.png">
+				</div>
+				<div class="heading margin_auto">
+					<img src="./images/heading-min.png">
+				</div>
+				<div class="card_cont margin_auto">
+					<div class="card_1 fade_in_3">
+						<img src="./images/card_1-min.png">
+					</div>
+					<div class="card_2 fade_in_6">
+						<img src="./images/card_2-min.png">
+					</div>
+					<div class="card_3 fade_in_9">
+						<img src="./images/card_3-min.png">
+					</div>
+				</div>
+				<div class="hurt_deg_cont fade_in_12 margin_auto">
+					<img src="./images/hurt_deg-min.png">
+				</div>
+				<ul class="hurt_dot_cont fade_in_12">
+					<li @click="score(1,$index)" v-for="item in dots_1" track-by="$index" v-bind:class="dots_1[$index]"></li>
+				</ul>
+				<div @click="next(2)" class="next_bt_cont">
+					<img src="./images/next_bt-min.png">
+				</div>	
+			</div>
+			<div class="page_bottom_cont">
+				<img src="./images/page_bottom-min.png">
+			</div>
+		</div>
+		<div  v-bind:class="show[3]" class="lib page_item">
+			<div class="page">
+				<div class="header margin_auto">
+					<img src="./images/xianquan-min.png">
+				</div>
+				<div class="lib_heading margin_auto">
+					<img src="./images/lib_heading-min.png">
+				</div>
+				<div class="lib_cont margin_auto">
+					<div class="lib_1 fade_in_3">
+						<img src="./images/lib_1-min.png">
+					</div>
+					<div class="lib_2 fade_in_6">
+						<img src="./images/lib_2-min.png">
+					</div>
+					<div class="lib_3 fade_in_9">
+						<img src="./images/lib_3-min.png">
+					</div>
+				</div>
+				<div class="hurt_deg_cont fade_in_12 margin_auto">
+					<img src="./images/hurt_deg-min.png">
+				</div>
+				<ul class="hurt_dot_cont fade_in_12">
+					<li @click="score(2,$index)" v-for="item in dots_2" track-by="$index" v-bind:class="dots_2[$index]"></li>
+				</ul>
+				<div @click="next(3)" class="next_bt_cont">
+					<img src="./images/next_bt-min.png">
+				</div>
+			</div>
+			<div class="page_bottom_cont">
+				<img src="./images/page_bottom-min.png">
+			</div>
+		</div>
+		<div  v-bind:class="show[4]" class="grade page_item">
+			<div class="page">
+				<div class="header margin_auto">
+					<img src="./images/xianquan-min.png">
+				</div>
+				<div class="grade_heading margin_auto">
+					<img src="./images/grade_heading-min.png">
+				</div>
+				<div class="grade_cont">
+					<div class="grade_1 fade_in_3">
+						<img src="./images/grade_1-min.png">
+					</div>
+					<div class="grade_2 fade_in_6">
+						<img src="./images/grade_2-min.png">
+					</div>
+					<div class="grade_3 fade_in_9">
+						<img src="./images/grade_3-min.png">
+					</div>
+				</div>
+				<div class="hurt_deg_cont fade_in_12 margin_auto">
+					<img src="./images/hurt_deg-min.png">
+				</div>
+				<ul class="hurt_dot_cont fade_in_12">
+					<li @click="score(3,$index)" v-for="item in dots_3" track-by="$index" v-bind:class="dots_3[$index]"></li>
+				</ul>
+				<div @click="next(4)" class="next_bt_cont">
+					<img src="./images/next_bt-min.png">
+				</div>
+			</div>
+			<div class="page_bottom_cont">
+				<img src="./images/page_bottom-min.png">
+			</div>
+		</div>
+		<div  v-bind:class="show[5]" class="electric page_item">
+			<div class="page">
+				<div class="header margin_auto">
+					<img src="./images/xianquan-min.png">
+				</div>
+				<div class="electric_heading margin_auto">
+					<img src="./images/electric_heading-min.png">
+				</div>
+				<div class="electric_cont margin_auto">
+					<div class="electric_1 fade_in_3">
+						<img src="./images/electric_1-min.png">
+					</div>
+					<div class="right_box">
+						<div class="electric_2 fade_in_6">
+							<img src="./images/electric_2-min.png">
+						</div>
+						<div class="electric_3 fade_in_9">
+							<img src="./images/electric_3-min.png">
+						</div>
+					</div>
+				</div>
+				<div class="hurt_deg_cont fade_in_12 margin_auto">
+					<img src="./images/hurt_deg-min.png">
+				</div>
+				<ul class="hurt_dot_cont fade_in_12">
+					<li @click="score(4,$index)" v-for="item in dots_4" track-by="$index" v-bind:class="dots_4[$index]"></li>
+				</ul>
+				<div @click="next(5)" class="next_bt_cont">
+					<img src="./images/next_bt-min.png">
+				</div>
+			</div>
+			<div class="page_bottom_cont">
+				<img src="./images/page_bottom-min.png">
+			</div>
+		</div>
+		<div v-bind:class="show[6]" class="announcement page_item">
+			<div class="page">
+				<div class="header margin_auto">
+					<img src="./images/xianquan-min.png">
+				</div>
+				<div class="ance_heading margin_auto">
+					<img src="./images/ance_heading-min.png">
+				</div>
+				<div class="ance_cont margin_auto">
+					<div class="ance_1 fade_in_3">
+						<img src="./images/ance_1-min.png">
+					</div>
+					<div class="ance_2 fade_in_6">
+						<img src="./images/ance_2-min.png">
+					</div>
+				</div>
+				<div class="hurt_deg_cont fade_in_9 margin_auto">
+					<img src="./images/hurt_deg-min.png">
+				</div>
+				<ul class="hurt_dot_cont fade_in_9">
+					<li @click="score(5,$index)" v-for="item in dots_5" track-by="$index" v-bind:class="dots_5[$index]"></li>
+				</ul>
+				<div @click="next(6)" class="next_bt_cont">
+					<img src="./images/next_bt-min.png">
+				</div>
+			</div>
+			<div class="page_bottom_cont">
+				<img src="./images/page_bottom-min.png">
+			</div>
+		</div>
+		<div  v-bind:class="show[7]" class="course page_item">
+			<div class="page">
+				<div class="header margin_auto">
+					<img src="./images/xianquan-min.png">
+				</div>
+				<div class="course_heading margin_auto">
+					<img src="./images/course_heading-min.png">
+				</div>
+				<div class="course_cont margin_auto">
+					<div class="course_1 fade_in_3">
+						<img src="./images/course_1-min.png">
+					</div>
+					<div class="course_2 fade_in_6">
+						<img src="./images/course_2-min.png">
+					</div>
+				</div>
+				<div class="hurt_deg_cont fade_in_9 margin_auto">
+					<img src="./images/hurt_deg-min.png">
+				</div>
+				<ul class="hurt_dot_cont fade_in_9">
+					<li @click="score(6,$index)" v-for="item in dots_6" track-by="$index" v-bind:class="dots_6[$index]"></li>
+				</ul>
+				<div @click="next(7)" class="next_bt_cont">
+					<img src="./images/next_bt-min.png">
+				</div>
+			</div>
+			<div class="page_bottom_cont">
+				<img src="./images/page_bottom-min.png">
+			</div>
+		</div>
+		<div  v-bind:class="show[8]" class="department page_item">
+			<div class="page">
+				<div class="header margin_auto">
+					<img src="./images/xianquan-min.png">
+				</div>
+				<div class="department_heading margin_auto">
+					<img src="./images/department_heading-min.png">
+				</div>
+				<div class="department_cont margin_auto">
+					<div class="department_1 fade_in_3">
+						<img src="./images/department_1-min.png">
+					</div>
+					<div class="department_2 fade_in_6">
+						<img src="./images/department_2-min.png">
+					</div>
+					<div class="department_3 fade_in_9">
+						<img src="./images/department_3-min.png">
+					</div>
+				</div>
+				<div class="hurt_deg_cont fade_in_12 margin_auto">
+					<img src="./images/hurt_deg-min.png">
+				</div>
+				<ul class="hurt_dot_cont fade_in_12">
+					<li @click="score(7,$index)" v-for="item in dots_7" track-by="$index" v-bind:class="dots_7[$index]"></li>
+				</ul>
+				<div @click="next(8)" class="next_bt_cont">
+					<img src="./images/next_bt-min.png">
+				</div>
+			</div>
+			<div class="page_bottom_cont">
+				<img src="./images/page_bottom-min.png">
+			</div>
+		</div>
+		<div  v-bind:class="show[9]" class="certificate page_item">
+			<div class="header margin_auto">
+				<img src="./images/xianquan-min.png">
+			</div>
+			<div class="form_cont">
+				<img src="./images/form-min.png">
+			</div>
+			<div class="yinzhang_cont">
+				<img src="./images/yinzhang-min.png">
+			</div>
+			<div @click="next(9)" class="advice_cont">
+				<img src="./images/advice-min.png">
+			</div>
+			<div v-show='deg[0]' class="l_hurt_cont">
+				<span>轻度受伤</span>
+			</div>
+			<div v-show='deg[1]' class="m_hurt_cont">
+				<span>中度受伤</span>
+			</div>
+			<div v-show='deg[2]' class="h_hurt_cont">
+				<span>重度受伤</span>
+			</div>
+			<div class="text">
+				<p>${ des }</p>
+			</div>
+		</div>
+		<div  v-bind:class="show[10]" class="download page_item">
+			<div class="header margin_auto">
+				<img src="./images/xianquan-min.png">
+			</div>
+			<div class="mdc_can_cont">
+				<img src="./images/mdc_can-min.png">
+			</div>
+			<div class="mdc_1_cont">
+				<img src="./images/mdc_1-min.png">
+			</div>
+			<div class="mdc_2_cont">
+				<img src="./images/mdc_2-min.png">
+			</div>
+			<div class="xiazi_cont">
+				<img src="./images/xiazi-min.png">
+			</div>
+			<div class="desc_cont">
+				<img src="./images/desc-min.png">
+			</div>
+			<div class="qr_code_cont">
+				<img src="./images/qr_code-min.png">
+			</div>
+		</div>
+	</div>
+	<script src="./js/main.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+@function x_size($size_x) {
+    @return ($size_x / 640)*100%;
+}
+@function y_size($size_y) {
+    @return ($size_y / 1136)*100%;
+}
+.electric {
+	height: 100%;
+    height: 100vh;
+	position: relative;
+    .electric_heading {
+    	width: x_size(546);
+    	height: y_size(102);
+    	padding-top: y_size(32);
+    }
+    .electric_1,.electric_2 {
+    	margin-top: y_size(38);
+    	display: inline-block;
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+    .electric_1 {
+    	margin-left: x_size(52);
+    	width: x_size(226);
+        height: y_size(419);
+    }
+    .electric_2 {
+        height: y_size(143);
+    }
+    .right_box {
+        display:inline-block;
+        vertical-align:top;
+        width: x_size(328);
+    }
+    .electric_3 {
+        height: y_size(263);
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+}

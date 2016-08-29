@@ -1,0 +1,30 @@
+@function x_size($size_x) {
+    @return ($size_x / 640)*100%;
+}
+@function y_size($size_y) {
+    @return ($size_y / 1136)*100%;
+}
+.announcement {
+    height: 100%;
+	height: 100vh;
+	position: relative;
+    .ance_heading {
+        width: 83.3%;
+        height: y_size(88);
+        padding-top: y_size(32);
+        padding-bottom: y_size(13);
+    }
+    .ance_1,
+    .ance_2 {
+        width: x_size(547);
+        height: y_size(224);
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+    .ance_1 {
+        margin-left: x_size(48);
+    }
+    .ance_2 {
+        margin-left: x_size(52);
+    }
+}

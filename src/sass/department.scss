@@ -1,0 +1,40 @@
+@function x_size($size_x) {
+    @return ($size_x / 640)*100%;
+}
+@function y_size($size_y) {
+    @return ($size_y / 1136)*100%;
+}
+.department {
+	height: 100%;
+    height: 100vh;
+	position: relative;
+    .department_heading {
+    	width: x_size(546);
+    	height: y_size(102);
+    	padding-top: y_size(32);
+    	padding-bottom: y_size(20);
+    }
+    .department_1 {
+    	width: x_size(543);
+        height: y_size(256);
+    	display: inline-block;
+    	padding-left: x_size(48);
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+    .department_2 {
+    	display: inline-block;
+    	padding-left: x_size(48);
+    	width: x_size(329);
+        height: y_size(189);
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+    .department_3 {
+    	display: inline-block;
+    	width: x_size(212);
+        height: y_size(184);
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+}

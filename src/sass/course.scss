@@ -1,0 +1,32 @@
+@function x_size($size_x) {
+    @return ($size_x / 640)*100%;
+}
+@function y_size($size_y) {
+    @return ($size_y / 1136)*100%;
+}
+.course {
+	height: 100%;
+    height: 100vh;
+	position: relative;
+    .course_heading {
+    	width: x_size(533);
+    	height: y_size(88);
+    	padding-top: y_size(32);
+    	padding-bottom: y_size(25);
+    }
+    .course_1 {
+    	display: inline-block;
+    	padding-left: x_size(48);
+    	width: x_size(239);
+        height: y_size(429);
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+    .course_2 {
+    	display: inline-block;
+    	width: x_size(303);
+        height: y_size(429);
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+}
