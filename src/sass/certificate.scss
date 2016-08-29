@@ -9,14 +9,19 @@
 @function y_size($size_y) {
     @return ($size_y / 1136)*100%;
 }
+@media screen and (max-width: 320px) {
+    .certificate span {
+        line-height: 150%;
+    }
+}
+@media screen and (min-width: 360px) {
+    .certificate span {
+        line-height: 200%;
+    }
+}
 @media screen and (min-width: 500px) {
     .certificate span {
         line-height: 300%;
-    }
-}
-@media screen and (max-width: 500px) {
-    .certificate span {
-        line-height: 200%;
     }
 }
 .certificate {
