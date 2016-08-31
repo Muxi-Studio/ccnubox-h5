@@ -105,7 +105,7 @@ li {
     @return ($size_x / 640)*100%;
 }
 @function y_size($size_y) {
-    @return ($size_y / 1136)*100vh;
+    @return ($size_y / 1136)*100%;
 }
 /*
 eliminate animation flash screen 

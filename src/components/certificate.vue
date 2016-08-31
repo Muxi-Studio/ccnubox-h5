@@ -253,6 +253,7 @@ export default {
 	span {
 		display: inline-block;
 		width: 4em;
+		font-size: 50%;
 		line-height:2.2em;
 		white-space: nowrap;
 		overflow: hidden;
