@@ -124,7 +124,7 @@ eliminate animation flash screen
 }
 .header {
     width: x_size(490);
-    height: y_size(77);
+    height: 45px;
 }
 .main {
      max-width: 500px;
@@ -132,7 +132,7 @@ eliminate animation flash screen
      overflow: hidden;
 }
 .page_bottom_cont {
-    height: y_size(80);
+    height: 47px;
     margin-top: y_size(-15);
 }
 .next_bt_cont {
@@ -150,13 +150,13 @@ eliminate animation flash screen
 .hurt_deg_cont {
     padding-top: y_size(23);
     width: x_size(230);
-    height: y_size(54);
+    height: 45px;
     padding-bottom: y_size(8);
     opacity: 0;
     filter: alpha(opacity=0);
 }
 .hurt_dot_cont {
-    height: y_size(49);
+    height: 29px;
     padding-bottom: y_size(61);
     font-size: 0;
     text-align: center;

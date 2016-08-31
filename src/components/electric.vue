@@ -80,20 +80,20 @@ export default {
 }
 .electric_heading {
 	width: x_size(546);
-	height: y_size(102);
+	height: 59px;
 	padding-top: y_size(32);
 }
 .electric_1,.electric_2 {
-	margin-top: y_size(38);
+	margin-top: y_size(18);
 	display: inline-block;
 }
 .electric_1 {
 	margin-left: x_size(52);
 	width: x_size(226);
-    height: y_size(419);
+    height: 245px;
 }
 .electric_2 {
-    height: y_size(143);
+    height: 90px;
 }
 .right_box {
     display:inline-block;
@@ -101,6 +101,6 @@ export default {
     width: x_size(328);
 }
 .electric_3 {
-    height: y_size(263);
+    height: 154px;
 }
 </style>

@@ -78,8 +78,7 @@ export default {
 }
 .lib_heading {
 	width: x_size(533);
-	height: y_size(88);
-	padding-bottom: y_size(18);
+	height: 56px;
 }
 .lib_cont {
 	font-size: 0;
@@ -90,16 +89,15 @@ export default {
 .lib_1 {
 	margin-left: x_size(53);
 	width: x_size(536);
-	height: y_size(179);
+	height: 102px;
 }
 .lib_2 {
 	margin-left: x_size(54);
 	width: x_size(249);
-	height: y_size(262);
+	height: 151px;
 }
 .lib_3 {
 	width: x_size(269);
-	height: y_size(271);
-	margin-bottom: y_size(30);
+	height: 156px;
 }
 </style>

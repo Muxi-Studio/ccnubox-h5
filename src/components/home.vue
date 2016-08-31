@@ -70,8 +70,8 @@ export default {
     position: absolute;
 }
 .test {
+     height: 312px;
      width: x_size(579);
-     height: y_size(184);
      padding-left: x_size(21);
 }
 .sword_1 {

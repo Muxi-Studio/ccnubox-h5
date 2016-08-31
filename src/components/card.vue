@@ -77,6 +77,14 @@ export default {
 @function y_size($size_y) {
     @return ($size_y / 1136)*100;
 }
+@mixin eliminate_flash {
+    -webkit-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-backface-visibility:hidden;
+            backface-visibility:hidden;
+}
 .finger {
     position: absolute;
     left: x_size(205);
@@ -103,49 +111,50 @@ export default {
 }
 .card_1 {
     width: x_size(259);
-    height: y_size(151);
+    height: y_size(152);
 }
 .card_2 {
     width: x_size(285);
-    height: y_size(157);
+    height: y_size(158);
 }
 .card_3 {
     width: x_size(560);
-    height: y_size(271);
+    height: y_size(272);
 }
 .current {
     .finger {
-        -webkit-animation: finger_translateY .6s linear 1.2s 4;
-                animation: finger_translateY .6s linear 1.2s 8;
+        -webkit-animation: finger_translateY 1s linear 1.2s 4;
+                animation: finger_translateY 1s linear 1.2s 4;
         -webkit-transform-origin: bottom left;
             -ms-transform-origin: bottom left;
                 transform-origin: bottom left;
         -webkit-animation-fill-mode: forwards;
                 animation-fill-mode: forwards;
+                @include eliminate_flash;
     }
 }
 @-webkit-keyframes finger_translateY {
     0% { 
-        -webkit-transform: translateY(y_size(0)); 
-                transform: translateY(y_size(0))
+        -webkit-transform: translateY(0); 
+                transform: translateY(0)
     }
     100% { 
         opacity: 0;
         filter: alpha(opacity=0);
-        -webkit-transform: translateY(y_size(900));
-                transform: translateY(y_size(900))
+        -webkit-transform: translateY(30px);
+                transform: translateY(30px)
     }
 }
 @keyframes finger_translateY {
     0% { 
-        -webkit-transform: translateY(y_size(0)); 
-                transform: translateY(y_size(0))
+        -webkit-transform: translateY(0); 
+                transform: translateY(0)
     }
     100% { 
         opacity: 0;
         filter: alpha(opacity=0);
-        -webkit-transform: translateY(y_size(900));
-                transform: translateY(y_size(900))
+        -webkit-transform: translateY(30px);
+                transform: translateY(30px)
     }
 }
 </style>

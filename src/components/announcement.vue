@@ -75,14 +75,14 @@ export default {
 }
 .ance_heading {
     width: 83.3%;
-    height: y_size(88);
+    height: 58px;
     padding-top: y_size(32);
     padding-bottom: y_size(13);
 }
 .ance_1,
 .ance_2 {
     width: x_size(547);
-    height: y_size(224);
+    height: 128px;
 }
 .ance_1 {
     margin-left: x_size(48);

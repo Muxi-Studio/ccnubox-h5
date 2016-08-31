@@ -78,7 +78,7 @@ export default {
 }
 .grade_heading {
 	width: x_size(546);
-	height: y_size(102);
+	height: 59px;
 	padding-top: y_size(32);
 }
 .grade_1,.grade_2 {
@@ -88,16 +88,16 @@ export default {
 .grade_1 {
 	margin-left: x_size(53);
 	width: x_size(303);
-    height: y_size(194);
+    height: 112px;
 }
 .grade_2 {
 	margin-top: y_size(5);
 	width: x_size(243);
-    height: y_size(187);
+    height: 109px;
 }
 .grade_3 {
 	margin-left: x_size(58);
 	width: x_size(534);
-    height: y_size(231);
+    height: 132px;
 }
 </style>

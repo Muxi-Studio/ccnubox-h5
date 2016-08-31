@@ -75,19 +75,19 @@ export default {
 }
 .course_heading {
 	width: x_size(533);
-	height: y_size(88);
-	padding-top: y_size(32);
+	height: 58px;
+	padding-top: y_size(22);
 	padding-bottom: y_size(25);
 }
 .course_1 {
 	display: inline-block;
 	padding-left: x_size(48);
 	width: x_size(239);
-    height: y_size(429);
+    height: 251px;
 }
 .course_2 {
 	display: inline-block;
 	width: x_size(303);
-    height: y_size(429);
+    height: 251px;
 }
 </style>

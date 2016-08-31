@@ -73,16 +73,19 @@ export default {
 @media screen and (min-width: 320px) {
     .main .page_item span {
     	font-size: 50%;
+    	line-height:2.2em;
     }
 }
 @media screen and (min-width: 400px) and (min-height: 700px) {
     .main .page_item span {
     	font-size: 60%;
+    	line-height:1.8em;
     }
 }
 @media screen and (min-width: 568px) and (min-height: 800px) {
     .main .page_item span {
     	font-size: 80%;
+    	line-height:2.0em;
     }
 }
 /*** special setting for iphone 4 // had done my best bro***/
@@ -254,7 +257,7 @@ export default {
 		display: inline-block;
 		width: 4em;
 		font-size: 50%;
-		line-height:2.2em;
+		line-height:1.6em;
 		white-space: nowrap;
 		overflow: hidden;
 		border-right: .05em solid transparent;

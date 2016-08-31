@@ -83,13 +83,13 @@ export default {
 }
 .department_heading {
 	width: x_size(546);
-	height: y_size(102);
-	padding-top: y_size(32);
+	height: 58px;
+	padding-top: y_size(22);
 	padding-bottom: y_size(20);
 }
 .department_1 {
 	width: x_size(543);
-    height: y_size(256);
+    height: 149px;
 	display: inline-block;
 	padding-left: x_size(48);
 }
@@ -97,11 +97,11 @@ export default {
 	display: inline-block;
 	padding-left: x_size(48);
 	width: x_size(329);
-    height: y_size(189);
+    height: 108px;
 }
 .department_3 {
 	display: inline-block;
 	width: x_size(212);
-    height: y_size(184);
+    height: 106px;
 }
 </style>
