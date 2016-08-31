@@ -139,7 +139,7 @@ eliminate animation flash screen
     position: absolute;
     width: x_size(153);
     height: y_size(68);
-    bottom:y_size(14);
+    bottom:y_size(34);
     right: x_size(42);
 }
 .page {
