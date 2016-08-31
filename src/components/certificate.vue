@@ -41,11 +41,8 @@ export default {
     methods:{
     	next(i){
     		var self=this;
-    		self.page.$set(i,'next_page');
-    		setTimeout(()=>{
-    			self.page.$set(i,'hide');
-    		    self.page.$set(i+1,'current');
-    		},600)
+    		self.page.$set(i,'hide');
+    		self.page.$set(i+1,'current');
     	}
     }
 }
@@ -72,6 +69,29 @@ export default {
 .l_hurt_cont,
 .text {
 	position: absolute;
+}
+@media screen and (min-width: 320px) {
+    .main .page_item span {
+    	font-size: 50%;
+    }
+}
+@media screen and (min-width: 400px) and (min-height: 700px) {
+    .main .page_item span {
+    	font-size: 60%;
+    }
+}
+@media screen and (min-width: 568px) and (min-height: 800px) {
+    .main .page_item span {
+    	font-size: 80%;
+    }
+}
+/*** special setting for iphone 4 // had done my best bro***/
+
+@media screen and (max-width: 320px) and (max-height: 580px) {
+    .main .page_item span {
+		font-size: 50%;
+		line-height:2.2em ;
+    }
 }
 .page {
 	background: transparent;
@@ -113,6 +133,7 @@ export default {
 	left: x_size(197);
 	text-align: center;
 	font-weight: bold;
+	font-size: 40px;
 	color: rgb(0, 0, 0);
 }
 .text {
@@ -232,7 +253,7 @@ export default {
 	span {
 		display: inline-block;
 		width: 4em;
-		font-size: 60%;
+		line-height:2.2em;
 		white-space: nowrap;
 		overflow: hidden;
 		border-right: .05em solid transparent;

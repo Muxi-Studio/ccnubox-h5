@@ -121,7 +121,6 @@ eliminate animation flash screen
 .page_item {
     position: relative;
     height: 100%;
-    height: 100vh;
 }
 .header {
     width: x_size(490);
@@ -129,6 +128,7 @@ eliminate animation flash screen
 }
 .main {
      max-width: 500px;
+     height: 100%;
      overflow: hidden;
 }
 .page_bottom_cont {

@@ -71,20 +71,24 @@ export default {
 }
 .test {
      width: x_size(579);
+     height: y_size(184);
      padding-left: x_size(21);
 }
 .sword_1 {
     width: x_size(66);
+    height: 50px;
     top: y_size(2038);
     left: x_size(806);
 }
 .sword_2 {
     width: x_size(106);
+    height: 38px;
     top: y_size(296);
     left: x_size(-406); 
 }
 .knife {
     width: x_size(119);
+    height: 65px;
     top: y_size(681);
     left: x_size(393);
 }
@@ -95,6 +99,7 @@ export default {
 }
 .idont {
     width: x_size(461);
+    height: 92px;
     bottom: y_size(-210);
     left: x_size(42);
 }
