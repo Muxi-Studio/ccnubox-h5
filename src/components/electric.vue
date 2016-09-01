@@ -40,24 +40,61 @@
 </template>
 <script>
 var dot=[],
-count=0;
+count=0,
+store_same=0,
+store_double=0;
 export default {
     props: ['control'],
     data(){
-    	return {
-    		dot: Array.from(this.control.dots),
-    		page: this.control.page,
-    		num: this.control.num
-    	}
+        return {
+            dot: Array.from(this.control.dots),
+            page: this.control.page,
+            num: this.control.num
+        }
     },
     methods:{
-    	score(i){
-    		var len=this.dot.length;
-    		for(var j=0;j<=len-1;j++){
-    			j<=i?this.dot.$set(j,'dot_fill'):this.dot.$set(j,'dot_empty')
-    		}
-    		count=i+1;
-    	},
+        score(i){
+            var len=this.dot.length,
+            self=this,
+            flag=store_double % 2,
+            dot_add=()=>{
+                for(var j=0;j<=len-1;j++){
+                    j<=i?this.dot.$set(j,'dot_fill'):this.dot.$set(j,'dot_empty')
+                }
+            },
+            dot_reduce=()=>{
+                for(var j=0;j<=len-1;j++){
+                    j<i?this.dot.$set(j,'dot_fill'):this.dot.$set(j,'dot_empty')
+                }
+            }
+            if(store_same==i){
+                if(flag==1){
+                    dot_add();
+                    count=i+1;
+                } else {
+                    dot_reduce();
+                    count=i;
+                }
+                store_double++;
+            } else{
+                store_double=0;
+                if (i<store_same) {
+                    if(flag==1){
+                        i=i-1;
+                        dot_add();
+                        count=i+1;
+                    } else {
+                        dot_add();
+                        count=i+1;
+                    }
+                    
+                } else {
+                    dot_add();
+                    count=i+1;
+                }
+            }
+            store_same=i;
+        },
     	next(i){
     		var self=this;
     		self.page.$set(i,'next_page');

@@ -1,6 +1,6 @@
 <template>
 	<div v-load="loading" class="page_item" :class="page[0]">
-		<div @click="next(0)" class="body_cont">
+		<div class="body_cont">
 			<img src="../assets/body.png">
 		</div>
 		<div class="hand_cont">
@@ -19,36 +19,16 @@
 </template>
 
 <script>
-var dot=[],
-count=0;
 export default {
     props: ['control'],
     data(){
         return {
-            dot: Array.from(this.control.dots),
             page: this.control.page,
-            num: this.control.num,
             width: this.control.width,
             loaded: this.control.loaded
         }
     },
     methods:{
-        score(i){
-            var len=this.dot.length;
-            for(var j=0;j<=len-1;j++){
-                j<=i?this.dot.$set(j,'dot_fill'):this.dot.$set(j,'dot_empty')
-            }
-            count=i+1;
-        },
-        next(i){
-            var self=this;
-            self.page.$set(i,'next_page');
-            self.num.$set(i,count);
-            setTimeout(()=>{
-                self.page.$set(i,'hide');
-                self.page.$set(i+1,'current');
-            },600)
-        },
         loading(){
             var self=this;
             var random =(min, max)=>{
