@@ -22,8 +22,8 @@
             <div class="floder"></div>
             <div  v-tap="next(6)" class="next_bt next_bt_cont">
             </div>
-            <div class="page_bottom_cont page_bottom">
-            </div>
+        </div>
+        <div class="page_bottom_cont page_bottom">
         </div>
     </div>
 </template>
@@ -116,17 +116,20 @@ export default {
     padding-top: y_size(32);
     padding-bottom: y_size(13);
 }
+.ance_cont {
+    height: y_size(429);
+}
 .page_item .ance_1 {
   background-image: url(../assets/sprite.png);
   background-position: 0px 45.44782%;
   width: 85.46875%;
-  height: 128px;
+  height: 52.214%;
   background-size: 116.27057% 4768.11594%; }
 .page_item .ance_2 {
   background-image: url(../assets/sprite.png);
   background-position: 0px 49.75275%;
   width: 85%;
-  height: 128px;
+  height: 47.786%;
   background-size: 116.91176% 4633.80282%; }
 .ance_1 {
     margin-left: x_size(48);

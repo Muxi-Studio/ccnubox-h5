@@ -69,19 +69,52 @@ export default {
 @media screen and (min-width: 320px) {
     .main .page_item span {
     	font-size: 50%;
-    	line-height:1.8em;
+    	line-height:2.2em;
+    }
+    .main .text{
+		font-size: .8rem;
     }
 }
-@media screen and (min-width: 400px) and (min-height: 700px) {
+@media screen and (max-height: 320px) {
     .main .page_item span {
-    	font-size: 60%;
+    	font-size: 50%;
     	line-height:1.8em;
     }
+    .main .text{
+		font-size: .8rem;
+    }
 }
-@media screen and (min-width: 568px) and (min-height: 800px) {
+@media screen and (min-width: 568px) and (min-height: 500px) {
     .main .page_item span {
     	font-size: 80%;
-    	line-height:2.0em;
+    	line-height:1.5em;
+    }
+    .main .text{
+		font-size: 1.5rem;
+    }
+}
+@media screen and (min-width: 600px) and (min-height: 700px) {
+    .main .page_item span {
+    	font-size: 60%;
+    	line-height:2.2em;
+    }
+    .main .text{
+		font-size: 1.5rem;
+    }
+}
+@media screen and (min-width: 800px) and (min-height: 800px) {
+    .main .page_item span {
+    	font-size: 60%;
+    	line-height:2.7em;
+    }
+    .main .text{
+		font-size: 1.5rem;
+    }
+}
+@media screen and (max-height: 500px) {
+    .main .page_item span {
+    	font-size: 40%;
+    	line-height:2.3em;
     }
 }
 .page {
@@ -145,6 +178,7 @@ export default {
 	top: y_size(387);
 	left: x_size(136);
 	line-height: 1.2;
+	font-size: 1rem;
 	font-weight: bold;
 	text-indent: 1.5em;
 }

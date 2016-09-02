@@ -22,8 +22,8 @@
             <div class="floder"></div>
             <div  v-tap="next(7)" class="next_bt next_bt_cont">
             </div>
-            <div class="page_bottom_cont page_bottom">
-            </div>
+        </div>
+        <div class="page_bottom_cont page_bottom">
         </div>
 	</div>
 </template>
@@ -116,17 +116,20 @@ export default {
 	padding-top: y_size(22);
 	padding-bottom: y_size(25);
 }
+.course_cont {
+    height: y_size(424)
+}
 .page_item .course_1 {
   background-image: url(../assets/sprite.png);
   background-position: 0px 79.28587%;
   width: 37.04375%;
-  height: 251px;
+  height: 100%;
   background-size: 266.10879% 2300.6993%; }
 .page_item .course_2 {
   background-image: url(../assets/sprite.png);
   background-position: 0px 83.79237%;
   width: 47.04375%;
-  height: 251px;
+  height: 100%;
   background-size: 209.90099% 2300.6993%; }
 .course_1 {
 	display: inline-block;

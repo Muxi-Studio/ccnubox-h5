@@ -24,8 +24,8 @@
             <div class="floder"></div>
             <div  v-tap="next(5)" class="next_bt next_bt_cont">
             </div>
-            <div class="page_bottom_cont page_bottom">
-            </div>
+        </div>
+        <div class="page_bottom_cont page_bottom">
         </div>
 	</div>
 </template>

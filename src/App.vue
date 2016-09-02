@@ -124,8 +124,6 @@ eliminate animation flash screen
   background-position: 0px 9.18815%;
   width: 99.375%;
   height: 7.04225%;
-  position: absolute;
-  bottom: 0;
   background-size: 100% 12337.5%; }
 .page_item .floder {
   background-image: url(./assets/sprite.png);
@@ -133,7 +131,7 @@ eliminate animation flash screen
   width: 32.34375%;
   height: 11.17958%;
   position: absolute;
-  bottom: 6.04225%;
+  bottom: -1.04225%;
   right: 0;
   background-size: 307.24638% 7771.65354%; }
 .page_item {
@@ -141,13 +139,18 @@ eliminate animation flash screen
     height: 100%;
 }
 .main {
-     max-width: 1024px;
      height: 100%;
+     width: 100%;
+     max-height: 1024px;
+     min-height: 280px;
+     max-width: 768px;
+     min-width: 320px;
      overflow: hidden;
 }
 .page {
     width: 100%;
     height: 100%;
+    height: 92.95775%;
     position: relative;
 }
 .page_item .next_bt {
@@ -158,19 +161,19 @@ eliminate animation flash screen
   background-size: 415.68627% 14514.70588%; }
 .next_bt {
     position: absolute;
-    bottom:y_size(104);
+    bottom:y_size(0);
     right: x_size(42);
 }
 .page_item .hurt_deg {
   background-image: url(./assets/sprite.png);
   background-position: 0px 2.78622%;
   width: 35.9375%;
-  height: 49px;
+  height: y_size(54);
   background-size: 276.52174% 18277.77778%; }
 
 .hurt_deg_cont {
-    margin-top: y_size(30);
-    margin-bottom: y_size(28);
+    margin-top: y_size(22);
+    margin-bottom: y_size(9);
     opacity: 0;
     filter: alpha(opacity=0);
 }
@@ -183,7 +186,7 @@ eliminate animation flash screen
   background-position: 0px 1.29686%;
   background-size: 2120% 20142.85714%; }
 .hurt_dot_cont {
-    height: 29px;
+    height: y_size(49);
     padding-bottom: y_size(61);
     font-size: 0;
     text-align: center;
@@ -241,11 +244,11 @@ eliminate animation flash screen
     display: none;
 }
 .next_page {
-    .page {
-        -webkit-animation: uparr .6s  ease-in-out 1;
-                animation: uparr .6s  ease-in-out 1;
-        @include eliminate_flash;
-    }
+    -webkit-animation: uparr .6s  ease-in-out 1;
+            animation: uparr .6s  ease-in-out 1;
+    @include eliminate_flash;
+}
+.next_page {
     .floder_cont {
         -webkit-animation: next_rotateZ .6s  ease-in-out 1;
                 animation: next_rotateZ .6s  ease-in-out 1;

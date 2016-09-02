@@ -24,8 +24,8 @@
             <div class="floder"></div>
             <div  v-tap="next(8)" class="next_bt next_bt_cont">
             </div>
-            <div class="page_bottom_cont page_bottom">
-            </div>
+        </div>
+        <div class="page_bottom_cont page_bottom">
         </div>
 	</div>
 </template>
@@ -123,11 +123,14 @@ export default {
 	padding-top: y_size(22);
 	padding-bottom: y_size(20);
 }
+.department_cont {
+  height: y_size(442);
+}
 .page_item .department_1 {
   background-image: url(../assets/sprite.png);
   background-position: 0px 59.393%;
   width: 84.84375%;
-  height: 149px;
+  height: 50.904%;
   margin-bottom: y_size(10);
   background-size: 117.12707% 4045.08197%; }
 .department_1 {
@@ -138,7 +141,7 @@ export default {
   background-image: url(../assets/sprite.png);
   background-position: 0px 41.338%;
   width: 51.40625%;
-  height: 108px;
+  height: 49.096%;
   background-size: 193.31307% 5222.22222%; }
 .department_2 {
 	display: inline-block;
@@ -148,7 +151,7 @@ export default {
   background-image: url(../assets/sprite.png);
   background-position: 0px 35.63414%;
   width: 33.125%;
-  height: 106px;
+  height: 49.096%;
   display: inline-block;
   background-size: 300% 5364.13043%; }
 </style>

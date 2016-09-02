@@ -23,8 +23,8 @@
             <div class="floder"></div>
             <div  v-tap="next(2)" class="next_bt next_bt_cont">
             </div>
-            <div class="page_bottom_cont page_bottom">
-            </div>
+        </div>
+        <div class="page_bottom_cont page_bottom">
         </div>
     </div>
 </template>
@@ -116,7 +116,7 @@ export default {
 .finger {
     position: absolute;
     left: x_size(185);
-    bottom: 24%;
+    bottom: 22%;
     opacity: 0;
     filter: alpha(opacity=0);
 }
