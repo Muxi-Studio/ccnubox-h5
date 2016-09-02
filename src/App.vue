@@ -87,11 +87,6 @@ p {
     margin-top:0;
     margin-bottom:0;
 }
-img {
-    width: 100%;
-    height: 100%;
-    border:0;
-}
 ul {
     padding: 0;
     margin: 0;
@@ -118,43 +113,75 @@ eliminate animation flash screen
     -webkit-backface-visibility:hidden;
             backface-visibility:hidden;
 }
+.page_item .xianquan {
+  background-image: url(./assets/sprite.png);
+  background-position: 0px 7.59813%;
+  width: 76.5625%;
+  height: 6.69014%;
+  background-size: 129.79592% 12986.84211%; }
+.page_item .page_bottom {
+  background-image: url(./assets/sprite.png);
+  background-position: 0px 9.18815%;
+  width: 99.375%;
+  height: 7.04225%;
+  position: absolute;
+  bottom: 0;
+  background-size: 100% 12337.5%; }
+.page_item .floder {
+  background-image: url(./assets/sprite.png);
+  background-position: 0px 22.69108%;
+  width: 32.34375%;
+  height: 11.17958%;
+  position: absolute;
+  bottom: 6.04225%;
+  right: 0;
+  background-size: 307.24638% 7771.65354%; }
 .page_item {
     position: relative;
     height: 100%;
 }
-.header {
-    width: x_size(490);
-    height: 45px;
-}
 .main {
-     max-width: 500px;
+     max-width: 1024px;
      height: 100%;
      overflow: hidden;
 }
-.page_bottom_cont {
-    height: 47px;
-    margin-top: y_size(-15);
+.page {
+    width: 100%;
+    height: 100%;
+    position: relative;
 }
-.next_bt_cont {
+.page_item .next_bt {
+  background-image: url(./assets/sprite.png);
+  background-position: 0px 3.9911%;
+  width: 23.90625%;
+  height: 5.98592%;
+  background-size: 415.68627% 14514.70588%; }
+.next_bt {
     position: absolute;
-    width: x_size(153);
-    height: y_size(68);
-    bottom:y_size(34);
+    bottom:y_size(104);
     right: x_size(42);
 }
-.page {
-    position: relative;
-    background: url(../src/assets/page_border.png) no-repeat left bottom;
-    background-size: 100% 11.17%;
-}
+.page_item .hurt_deg {
+  background-image: url(./assets/sprite.png);
+  background-position: 0px 2.78622%;
+  width: 35.9375%;
+  height: 49px;
+  background-size: 276.52174% 18277.77778%; }
+
 .hurt_deg_cont {
-    padding-top: y_size(23);
-    width: x_size(230);
-    height: 45px;
-    padding-bottom: y_size(8);
+    margin-top: y_size(30);
+    margin-bottom: y_size(28);
     opacity: 0;
     filter: alpha(opacity=0);
 }
+.page_item .dot_empty {
+  background-image: url(./assets/sprite.png);
+  background-position: 0px 0.80041%;
+  background-size: 2120% 20142.85714%; }
+.page_item .dot_fill {
+  background-image: url(./assets/sprite.png);
+  background-position: 0px 1.29686%;
+  background-size: 2120% 20142.85714%; }
 .hurt_dot_cont {
     height: 29px;
     padding-bottom: y_size(61);
@@ -165,9 +192,12 @@ eliminate animation flash screen
     li {
         width: x_size(30);
         height: 100%;
-        margin-right: x_size(15);
+        margin-right: x_size(25);
         display: inline-block;
         background-size: 100% 100%;
+    }
+    li:first-child {
+        margin-left: x_size(25);
     }
 }
 .fade_in_3,
@@ -315,7 +345,8 @@ eliminate animation flash screen
 //class
 .margin_auto {
     display: block;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 .v_middle {
     display: inline-block;

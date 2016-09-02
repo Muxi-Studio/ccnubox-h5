@@ -1,21 +1,17 @@
 <template>
 	<div class="page_item" :class="page[9]">
-		<div class="header margin_auto">
-			<img src="../assets/xianquan.png">
+		<div class="xianquan margin_auto">
 		</div>
-		<div class="form_cont">
-			<img src="../assets/form.png">
+		<div class="form_cont form">
 		</div>
-		<div class="yinzhang_cont">
-			<img src="../assets/yinzhang.png">
+		<div class="yinzhang_cont yinzhang">
 		</div>
-		<div @click="next(9)" class="advice_cont">
-			<img src="../assets/advice.png">
+		<div v-tap="next(9)" class="advice_cont advice">
 		</div>
 		<div v-if="this.num[0]<20" class="l_hurt_cont">
 			<span>轻度受伤</span>
 		</div>
-		<div v-if="this.num[0]>=20" class="m_hurt_cont">
+		<div v-if="(this.num[0]>=20)&&(this.num[0]<25)" class="m_hurt_cont">
 			<span>中度受伤</span>
 		</div>
 		<div v-if="this.num[0]>=25" class="h_hurt_cont">
@@ -23,7 +19,7 @@
 		</div>
 		<div class="text">
 			<p v-if="this.num[0]<20">幸运的你并没有受到太大的伤害，不过偶尔会有一件事情使你焦头烂额。</p>
-			<p v-if="this.num[0]>=20" >天哪，差一点你就成了重度受伤患者了，赶紧给校园生活来个润滑剂吧！</p>
+			<p v-if="(this.num[0]>=20)&&(this.num[0]<25)" >天哪，差一点你就成了重度受伤患者了，赶紧给校园生活来个润滑剂吧！</p>
 			<p v-if="this.num[0]>=25">你的受伤指数如此之高？宝宝已惊呆！再不对症下药这校园的日子还怎么过?</p>
 		</div>
 	</div>
@@ -73,7 +69,7 @@ export default {
 @media screen and (min-width: 320px) {
     .main .page_item span {
     	font-size: 50%;
-    	line-height:2.2em;
+    	line-height:1.8em;
     }
 }
 @media screen and (min-width: 400px) and (min-height: 700px) {
@@ -88,44 +84,48 @@ export default {
     	line-height:2.0em;
     }
 }
-/*** special setting for iphone 4 // had done my best bro***/
-
-@media screen and (max-width: 320px) and (max-height: 580px) {
-    .main .page_item span {
-		font-size: 50%;
-		line-height:2.2em ;
-    }
-}
 .page {
 	background: transparent;
 }
-.l_hurt_cont {
-	background:transparent url('../assets/l_hurt.png') center no-repeat;
-	background-size: 100%,100%; 
-}
-.m_hurt_cont {
-	background:transparent url('../assets/m_hurt.png') center no-repeat;
-	background-size: 100%,100%; 
-}
-.h_hurt_cont {
-	background:transparent url('../assets/h_hurt.png') center no-repeat;
-	background-size: 100%,100%; 
-}
+.page_item .l_hurt_cont {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 6.81812%;
+  background-size: 258.53659% 12986.84211%; }
+.page_item .m_hurt_cont {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 6.10811%;
+  background-size: 258.53659% 12986.84211%; }
+.page_item .h_hurt_cont {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 8.41814%;
+  background-size: 258.53659% 12986.84211%; }
+.page_item .form {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 99.9798%;
+  width: 77.96875%;
+  height: 49.47183%;
+  background-size: 127.45491% 1756.22776%; }
 .form_cont {
-	width: x_size(499);
-	height: y_size(562);
-	padding-top: y_size(40);
-	padding-left: x_size(87);
+	margin-top: y_size(40);
+	margin-left: x_size(87);
 }
+.page_item .advice {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 11.90331%;
+  width: 60.625%;
+  height: 8.89085%;
+  background-size: 163.91753% 9772.27723%; }
 .advice_cont {
-	width: x_size(388);
-	height: y_size(101);
-	padding-top: y_size(31);
-	padding-left: x_size(139);
+	margin-top: y_size(31);
+	margin-left: x_size(136);
 }
+.page_item .yinzhang {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 30.11447%;
+  width: 26.25%;
+  height: 14.61268%;
+  background-size: 378.57143% 5945.78313%; }
 .yinzhang_cont {
-	width: x_size(168);
-	height: y_size(166);
 	top: y_size(661);
 	left: x_size(879);
 }

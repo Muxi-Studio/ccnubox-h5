@@ -1,19 +1,15 @@
 <template>
 	<div v-load="loading" class="page_item" :class="page[0]">
-		<div class="body_cont">
-			<img src="../assets/body.png">
+		<div class="body_cont body">
 		</div>
-		<div class="hand_cont">
-			<img src="../assets/hand.png">
+		<div class="hand_cont hand">
 		</div>
-		<div class="hp_cont">
-			<img src="../assets/hp_empty.png">
+		<div class="hp_cont hp_empty">
 		</div>
 		<div class="hp_bg">
 			<div v-bind:style="{ width: width+'%'}" class="bg"></div>
 		</div>
-		<div class="hp_fill_cont">
-			<img src="../assets/hp_fill.png">
+		<div class="hp_fill_cont hp_fill">
 		</div>
 	</div>
 </template>
@@ -77,6 +73,30 @@ export default {
 @function y_size($size_y) {
     @return ($size_y / 1136)*100%;
 }
+.page_item .hp_empty {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 1.79331%;
+  width: 46.71875%;
+  height: 4.31338%;
+  background-size: 212.70903% 20142.85714%; }
+.page_item .hp_fill {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 2.33000%;
+  width: 35.625%;
+  height: 4.31338%;
+  background-size: 278.94737% 20142.85714%; }
+.page_item .hand {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 3.33333%;
+  width: 20.15625%;
+  height: 5.19366%;
+  background-size: 493.02326% 16728.81356%; }
+.page_item .body {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 37.49838%;
+  width: 51.71875%;
+  height: 16.28521%;
+  background-size: 192.14502% 5335.13514%; }
 .body_cont,
 .hand_cont,
 .hp_cont,
@@ -85,8 +105,6 @@ export default {
     position: absolute;
 }
 .body_cont {
-    width: x_size(331);
-    height: y_size(185);
     left: x_size(150);
     top: y_size(254);
     -webkit-animation: body_scale .2s linear infinite;
@@ -97,10 +115,8 @@ export default {
     @include eliminate_flash;
 }
 .hand_cont {
-    width: x_size(129);
-    height: y_size(59);
     left: x_size(267);
-    top: y_size(364);
+    top: y_size(362);
     -webkit-animation: hand_rotateZ .2s linear infinite;
             animation: hand_rotateZ .2s linear infinite;
     -webkit-transform-origin: left top;
@@ -109,8 +125,6 @@ export default {
     @include eliminate_flash;
 }
 .hp_cont {
-    width: x_size(299);
-    height: y_size(49);
     left: x_size(169);
     top: y_size(462);
 }

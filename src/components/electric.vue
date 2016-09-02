@@ -1,41 +1,32 @@
 <template>
 	<div class="page_item" :class="page[5]">
 		<div class="page">
-			<div class="header margin_auto">
-				<img src="../assets/xianquan.png">
-			</div>
+			<div class="xianquan margin_auto">
+            </div>
 			<div class="electric_heading margin_auto">
-				<img src="../assets/electric_heading.png">
 			</div>
-			<div class="electric_cont margin_auto">
-				<div class="electric_1 fade_in_3">
-					<img src="../assets/electric_1.png">
+			<div class="electric_1 fade_in_3">
+			</div>
+			<div class="right_box">
+				<div class="electric_2 fade_in_6">
 				</div>
-				<div class="right_box">
-					<div class="electric_2 fade_in_6">
-						<img src="../assets/electric_2.png">
-					</div>
-					<div class="electric_3 fade_in_9">
-						<img src="../assets/electric_3.png">
-					</div>
+				<div class="electric_3 fade_in_9">
 				</div>
 			</div>
-			<div class="hurt_deg_cont margin_auto fade_in_12">
-				<img src="../assets/hurt_deg.png">
-			</div>
-			<ul class="hurt_dot_cont fade_in_12">
-				<li @click='score($index)' v-for="item in dot" track-by="$index" :class='dot[$index]'>
-					<img v-if='("dot_empty")==(dot[$index])' src="../assets/dot_empty.png" height="49" width="30">
-					<img v-else src="../assets/dot_fill.png" height="49" width="30">
-				</li>
-			</ul>
-			<div  @click="next(5)" class="next_bt_cont">
-				<img src="../assets/next_bt.png">
-			</div>
-		</div>
-		<div class="page_bottom_cont">
-			<img src="../assets/page_bottom.png">
-		</div>
+			<div class="hurt_deg hurt_deg_cont fade_in_12 margin_auto">
+            </div>
+            <ul class="hurt_dot_cont fade_in_9">
+                <li v-tap='score($index)' v-for="item in dot" track-by="$index" :class='dot[$index]'>
+                    <div v-if='("dot_empty")==(dot[$index])' height="49" width="30"></div>
+                    <div v-else height="49" width="30"></div>
+                </li>
+            </ul>
+            <div class="floder"></div>
+            <div  v-tap="next(5)" class="next_bt next_bt_cont">
+            </div>
+            <div class="page_bottom_cont page_bottom">
+            </div>
+        </div>
 	</div>
 </template>
 <script>
@@ -115,29 +106,46 @@ export default {
 @function y_size($size_y) {
     @return ($size_y / 1136)*100%;
 }
-.electric_heading {
-	width: x_size(546);
-	height: 59px;
-	padding-top: y_size(32);
-}
+.page_item .electric_heading {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 15.0300%;
+  width: 85.3125%;
+  height: 8.97887%;
+  margin-top: y_size(32);
+  margin-bottom: y_size(38);
+  background-size: 116.48352% 9676.47059%; }
 .electric_1,.electric_2 {
 	margin-top: y_size(18);
 	display: inline-block;
 }
+.page_item .electric_1 {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 74.77968%;
+  width: 35.3125%;
+  height: 36.8838%;
+  background-size: 281.41593% 2355.60859%; }
 .electric_1 {
 	margin-left: x_size(52);
-	width: x_size(226);
-    height: 245px;
 }
-.electric_2 {
-    height: 90px;
+.right_box {
+  height: 36.8838%;
 }
+.page_item .electric_2 {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 25.36507%;
+  width: 90.25%;
+  height: 36%;
+  background-size: 208.52459% 6902.0979%; }
 .right_box {
     display:inline-block;
     vertical-align:top;
     width: x_size(328);
 }
-.electric_3 {
-    height: 154px;
-}
+.page_item .electric_3 {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 64.62741%;
+  margin-top: y_size(10);
+  width: 90.25%;
+  height: 64%;
+  background-size: 193.90244% 3752.85171%; }
 </style>

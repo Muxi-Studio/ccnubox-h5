@@ -1,37 +1,31 @@
 <template>
-	<div class="page_item" :class="page[6]">
-		<div class="page">
-			<div class="header margin_auto">
-				<img src="../assets/xianquan.png">
-			</div>
-			<div class="ance_heading margin_auto">
-				<img src="../assets/ance_heading.png">
-			</div>
-			<div class="ance_cont margin_auto">
-				<div class="ance_1 fade_in_3">
-					<img src="../assets/ance_1.png">
-				</div>
-				<div class="ance_2 fade_in_6">
-					<img src="../assets/ance_2.png">
-				</div>
-			</div>
-			<div class="hurt_deg_cont fade_in_9 margin_auto">
-				<img src="../assets/hurt_deg.png">
-			</div>
-			<ul class="hurt_dot_cont fade_in_9">
-				<li @click='score($index)' v-for="item in dot" track-by="$index" :class='dot[$index]'>
-					<img v-if='("dot_empty")==(dot[$index])' src="../assets/dot_empty.png" height="49" width="30">
-					<img v-else src="../assets/dot_fill.png" height="49" width="30">
-				</li>
-			</ul>
-			<div  @click="next(6)" class="next_bt_cont">
-				<img src="../assets/next_bt.png">
-			</div>
-		</div>
-		<div class="page_bottom_cont">
-			<img src="../assets/page_bottom.png">
-		</div>
-	</div>
+    <div class="page_item" :class="page[6]">
+        <div class="page">
+            <div class="xianquan margin_auto">
+            </div>
+            <div class="ance_heading margin_auto">
+            </div>
+            <div class="ance_cont margin_auto">
+                <div class="ance_1 fade_in_3">
+                </div>
+                <div class="ance_2 fade_in_6">
+                </div>
+            </div>
+            <div class="hurt_deg hurt_deg_cont fade_in_9 margin_auto">
+            </div>
+            <ul class="hurt_dot_cont fade_in_9">
+                <li v-tap='score($index)' v-for="item in dot" track-by="$index" :class='dot[$index]'>
+                    <div v-if='("dot_empty")==(dot[$index])' height="49" width="30"></div>
+                    <div v-else height="49" width="30"></div>
+                </li>
+            </ul>
+            <div class="floder"></div>
+            <div  v-tap="next(6)" class="next_bt next_bt_cont">
+            </div>
+            <div class="page_bottom_cont page_bottom">
+            </div>
+        </div>
+    </div>
 </template>
 <script>
 var dot=[],
@@ -110,17 +104,30 @@ export default {
 @function y_size($size_y) {
     @return ($size_y / 1136)*100%;
 }
+.page_item .ance_heading {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 16.07692%;
+  width: 85.3125%;
+  height: 8.97887%;
+  margin-top: y_size(32);
+  margin-bottom: y_size(21);
+  background-size: 116.48352% 9676.47059%; }
 .ance_heading {
-    width: 83.3%;
-    height: 58px;
     padding-top: y_size(32);
     padding-bottom: y_size(13);
 }
-.ance_1,
-.ance_2 {
-    width: x_size(547);
-    height: 128px;
-}
+.page_item .ance_1 {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 45.44782%;
+  width: 85.46875%;
+  height: 128px;
+  background-size: 116.27057% 4768.11594%; }
+.page_item .ance_2 {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 49.75275%;
+  width: 85%;
+  height: 128px;
+  background-size: 116.91176% 4633.80282%; }
 .ance_1 {
     margin-left: x_size(48);
 }

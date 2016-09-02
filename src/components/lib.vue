@@ -1,39 +1,30 @@
 <template>
 	<div class="page_item" :class="page[3]">
 		<div class="page">
-			<div class="header margin_auto">
-				<img src="../assets/xianquan.png">
-			</div>
+			<div class="xianquan margin_auto">
+            </div>
 			<div class="lib_heading margin_auto">
-				<img src="../assets/lib_heading.png">
 			</div>
-			<div class="lib_cont margin_auto">
-				<div class="lib_1  fade_in_3">
-					<img src="../assets/lib_1.png">
-				</div>
-				<div class="lib_2  fade_in_6">
-					<img src="../assets/lib_2.png">
-				</div>
-				<div class="lib_3  fade_in_9">
-					<img src="../assets/lib_3.png">
-				</div>
+			<div class="lib_1  fade_in_3">
 			</div>
-			<div class="hurt_deg_cont margin_auto  fade_in_12">
-				<img src="../assets/hurt_deg.png">
+			<div class="lib_2  fade_in_6">
 			</div>
-			<ul class="hurt_dot_cont  fade_in_12">
-				<li @click='score($index)' v-for="item in dot" track-by="$index" :class='dot[$index]'>
-					<img v-if='("dot_empty")==(dot[$index])' src="../assets/dot_empty.png" height="49" width="30">
-					<img v-else src="../assets/dot_fill.png" height="49" width="30">
-				</li>
-			</ul>
-			<div  @click="next(3)" class="next_bt_cont">
-				<img src="../assets/next_bt.png">
+			<div class="lib_3  fade_in_9">
 			</div>
-		</div>
-		<div class="page_bottom_cont">
-			<img src="../assets/page_bottom.png">
-		</div>
+			<div class="hurt_deg hurt_deg_cont fade_in_12 margin_auto">
+            </div>
+            <ul class="hurt_dot_cont fade_in_9">
+                <li v-tap='score($index)' v-for="item in dot" track-by="$index" :class='dot[$index]'>
+                    <div v-if='("dot_empty")==(dot[$index])' height="49" width="30"></div>
+                    <div v-else height="49" width="30"></div>
+                </li>
+            </ul>
+            <div class="floder"></div>
+            <div  v-tap="next(3)" class="next_bt next_bt_cont">
+            </div>
+            <div class="page_bottom_cont page_bottom">
+            </div>
+        </div>
 	</div>
 </template>
 <script>
@@ -113,28 +104,40 @@ export default {
 @function y_size($size_y) {
     @return ($size_y / 1136)*100%;
 }
-.lib_heading {
-	width: x_size(533);
-	height: 56px;
-}
-.lib_cont {
-	font-size: 0;
-}
+.page_item .lib_heading {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 19.19722%;
+  width: 85.3125%;
+  height: 8.97887%;
+  margin-top: y_size(32);
+  margin-bottom: y_size(18);
+  background-size: 116.48352% 9676.47059%; }
 .lib_1,.lib_2,.lib_3 {
 	display: inline-block;
 }
+.page_item .lib_1 {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 31.85633%;
+  width: 84.0625%;
+  height: 15.75704%;
+  margin-top: y_size(10);
+  background-size: 118.21561% 5513.96648%; }
 .lib_1 {
 	margin-left: x_size(53);
-	width: x_size(536);
-	height: 102px;
 }
+.page_item .lib_2 {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 54.42123%;
+  width: 38.90625%;
+  height: 20.33451%;
+  background-size: 255.42169% 4272.72727%; }
 .lib_2 {
 	margin-left: x_size(54);
-	width: x_size(249);
-	height: 151px;
 }
-.lib_3 {
-	width: x_size(269);
-	height: 156px;
-}
+.page_item .lib_3 {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 61.91514%;
+  width: 42.03125%;
+  height: 21.5669%;
+  background-size: 236.43123% 4028.57143%; }
 </style>

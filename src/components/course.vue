@@ -1,36 +1,30 @@
 <template>
 	<div class="page_item" :class='page[7]'>
 		<div class="page">
-			<div class="header margin_auto">
-				<img src="../assets/xianquan.png">
-			</div>
+			<div class="xianquan margin_auto">
+            </div>
 			<div class="course_heading margin_auto">
-				<img src="../assets/course_heading.png">
 			</div>
 			<div class="course_cont margin_auto">
 				<div class="course_1 fade_in_3">
-					<img src="../assets/course_1.png">
 				</div>
 				<div class="course_2 fade_in_6">
-					<img src="../assets/course_2.png">
 				</div>
 			</div>
-			<div class="hurt_deg_cont margin_auto fade_in_9">
-				<img src="../assets/hurt_deg.png">
-			</div>
-			<ul class="hurt_dot_cont fade_in_9">
-				<li @click='score($index)' v-for="item in dot" track-by="$index" :class='dot[$index]'>
-					<img v-if='("dot_empty")==(dot[$index])' src="../assets/dot_empty.png" height="49" width="30">
-					<img v-else src="../assets/dot_fill.png" height="49" width="30">
-				</li>
-			</ul>
-			<div @click="next(7)" class="next_bt_cont">
-				<img src="../assets/next_bt.png">
-			</div>
-		</div>
-		<div class="page_bottom_cont">
-			<img src="../assets/page_bottom.png">
-		</div>
+			<div class="hurt_deg hurt_deg_cont fade_in_9 margin_auto">
+            </div>
+            <ul class="hurt_dot_cont fade_in_9">
+                <li v-tap='score($index)' v-for="item in dot" track-by="$index" :class='dot[$index]'>
+                    <div v-if='("dot_empty")==(dot[$index])' height="49" width="30"></div>
+                    <div v-else height="49" width="30"></div>
+                </li>
+            </ul>
+            <div class="floder"></div>
+            <div  v-tap="next(7)" class="next_bt next_bt_cont">
+            </div>
+            <div class="page_bottom_cont page_bottom">
+            </div>
+        </div>
 	</div>
 </template>
 <script>
@@ -110,21 +104,35 @@ export default {
 @function y_size($size_y) {
     @return ($size_y / 1136)*100%;
 }
+.page_item .course_heading {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 12.91662%;
+  width: 86.3125%;
+  height: 8.97887%;
+  margin-top: y_size(32);
+  margin-bottom: y_size(25);
+  background-size: 116.48352% 9676.47059%; }
 .course_heading {
-	width: x_size(533);
-	height: 58px;
 	padding-top: y_size(22);
 	padding-bottom: y_size(25);
 }
+.page_item .course_1 {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 79.28587%;
+  width: 37.04375%;
+  height: 251px;
+  background-size: 266.10879% 2300.6993%; }
+.page_item .course_2 {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 83.79237%;
+  width: 47.04375%;
+  height: 251px;
+  background-size: 209.90099% 2300.6993%; }
 .course_1 {
 	display: inline-block;
-	padding-left: x_size(48);
-	width: x_size(239);
-    height: 251px;
+	margin-left: x_size(48);
 }
 .course_2 {
 	display: inline-block;
-	width: x_size(303);
-    height: 251px;
 }
 </style>

@@ -1,39 +1,30 @@
 <template>
 	<div class="page_item" :class="page[4]">
 		<div class="page">
-			<div class="header margin_auto">
-				<img src="../assets/xianquan.png">
-			</div>
+			<div class="xianquan margin_auto">
+            </div>
 			<div class="grade_heading margin_auto">
-				<img src="../assets/grade_heading.png">
 			</div>
-			<div class="grade_cont">
-				<div class="grade_1 fade_in_3">
-					<img src="../assets/grade_1.png">
-				</div>
-				<div class="grade_2 fade_in_6">
-					<img src="../assets/grade_2.png">
-				</div>
-				<div class="grade_3 fade_in_9">
-					<img src="../assets/grade_3.png">
-				</div>
+			<div class="grade_1 fade_in_3">
 			</div>
-			<div class="hurt_deg_cont margin_auto  fade_in_12">
-				<img src="../assets/hurt_deg.png">
+			<div class="grade_2 fade_in_6">
 			</div>
-			<ul class="hurt_dot_cont  fade_in_12">
-				<li @click='score($index)' v-for="item in dot" track-by="$index" :class='dot[$index]'>
-					<img v-if='("dot_empty")==(dot[$index])' src="../assets/dot_empty.png" height="49" width="30">
-					<img v-else src="../assets/dot_fill.png" height="49" width="30">
-				</li>
-			</ul>
-			<div @click="next(4)" class="next_bt_cont">
-				<img src="../assets/next_bt.png">
+			<div class="grade_3 fade_in_9">
 			</div>
-		</div>
-		<div class="page_bottom_cont">
-			<img src="../assets/page_bottom.png">
-		</div>
+			<div class="hurt_deg hurt_deg_cont fade_in_12 margin_auto">
+            </div>
+            <ul class="hurt_dot_cont fade_in_9">
+                <li v-tap='score($index)' v-for="item in dot" track-by="$index" :class='dot[$index]'>
+                    <div v-if='("dot_empty")==(dot[$index])' height="49" width="30"></div>
+                    <div v-else height="49" width="30"></div>
+                </li>
+            </ul>
+            <div class="floder"></div>
+            <div  v-tap="next(4)" class="next_bt next_bt_cont">
+            </div>
+            <div class="page_bottom_cont page_bottom">
+            </div>
+        </div>
 	</div>
 </template>
 <script>
@@ -113,28 +104,40 @@ export default {
 @function y_size($size_y) {
     @return ($size_y / 1136)*100%;
 }
-.grade_heading {
-	width: x_size(546);
-	height: 59px;
-	padding-top: y_size(32);
-}
+.page_item .grade_heading {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 18.1779%;
+  width: 85.3125%;
+  height: 8.97887%;
+  margin-top: y_size(36);
+  margin-bottom: y_size(26);
+  background-size: 116.48352% 9676.47059%; }
 .grade_1,.grade_2 {
-	margin-top: y_size(18);
 	display: inline-block;
 }
+.page_item .grade_1 {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 43.31227%;
+  width: 47.34375%;
+  height: 17.07746%;
+  background-size: 209.90099% 5087.62887%; }
 .grade_1 {
 	margin-left: x_size(53);
-	width: x_size(303);
-    height: 112px;
 }
-.grade_2 {
-	margin-top: y_size(5);
-	width: x_size(243);
-    height: 109px;
-}
+.page_item .grade_2 {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 39.4295%;
+  width: 37.96875%;
+  height: 16.46127%;
+  background-size: 261.7284% 5278.07487%; }
+.page_item .grade_3 {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 52.0600%;
+  margin-top: y_size(17);
+  width: 83.4375%;
+  height: 20.33451%;
+  background-size: 119.10112% 4272.72727%; }
 .grade_3 {
 	margin-left: x_size(58);
-	width: x_size(534);
-    height: 132px;
 }
 </style>

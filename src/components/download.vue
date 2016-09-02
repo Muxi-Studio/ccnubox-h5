@@ -1,25 +1,18 @@
 <template>
 	<div class="page_item" :class="page[10]">
-		<div class="header margin_auto">
-			<img src="../assets/xianquan.png">
+		<div class="xianquan margin_auto">
 		</div>
-		<div class="mdc_can_cont">
-			<img src="../assets/mdc_can.png">
+		<div class="mdc_can_cont mdc_can">
 		</div>
-		<div class="mdc_1_cont">
-			<img src="../assets/mdc_1.png">
+		<div class="mdc_1_cont mdc_1">
 		</div>
-		<div class="mdc_2_cont">
-			<img src="../assets/mdc_2.png">
+		<div class="mdc_2_cont mdc_2">
 		</div>
-		<div class="xiazi_cont">
-			<img src="../assets/xiazi.png">
+		<div class="xiazi_cont xiazi">
 		</div>
-		<div class="desc_cont fade_in_3">
-			<img src="../assets/desc.png">
+		<div class="desc_cont desc fade_in_3">
 		</div>
-		<div class="qr_code_cont">
-			<img src="../assets/qr_code.png">
+		<div class="qr_code_cont qr_code">
 		</div>
 	</div>
 </template>
@@ -82,36 +75,62 @@ export default {
     opacity: 0;
     filter: alpha(opacity=0);
 }
-.mdc_can_cont {
-    width: x_size(400);
-    height: y_size(210);
-    padding-left: x_size(175);
-}
+.page_item .mdc_can {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 47.54509%;
+  width: x_size(400);
+  height: y_size(210);
+  margin-left: x_size(155);
+  background-size: 159% 4700%; }
+.page_item .mdc_1 {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 0.37487%;
+  width: 8.4375%;
+  height: 3.69718%;
+  background-size: 1177.77778% 23500%; }
 .mdc_1_cont {
     top: y_size(160);
     left: x_size(230);
 }
+.page_item .mdc_2 {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 0%;
+  width: 9.375%;
+  height: 3.25704%;
+  background-size: 1060% 26675.67568%; }
 .mdc_2_cont {
     top: y_size(160);
     left: x_size(230);
 }
+.page_item .xiazi {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 70.61774%;
+  width: 86.5625%;
+  height: 28.69718%;
+  background-size: 114.80144% 3027.60736%; }
 .xiazi_cont {
-    width: x_size(554);
-    height: y_size(326);
-    padding-left: x_size(62);
+    margin-left: x_size(62);
 }
+.page_item .desc {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 4.66006%;
+  width: 68.125%;
+  height: 5.98592%;
+  background-size: 145.87156% 14514.70588%; }
 .desc_cont {
-    width: x_size(436);
-    height: y_size(68);
-    opacity: 0; 
+    opacity: 0;
+    filter: alpha(opacity=0);
     top: y_size(483);
     left: x_size(122);
 }
-.qr_code_cont {
-    width: x_size(496);
-    height: y_size(238);
-    padding-left: x_size(91);
-}
+.page_item .qr_code {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 56.88165%;
+  width: 77.5%;
+  height: 20.9507%;
+  margin-top: y_size(14);
+  margin-left: x_size(91);
+  background-size: 128.22581% 4147.05882%; }
 .current {
     .mdc_1_cont {
         -webkit-animation: mdc_1_in .5s cubic-bezier(.65,.78,.79,-0.2) .8s 1;

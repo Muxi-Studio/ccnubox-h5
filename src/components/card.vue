@@ -1,39 +1,30 @@
 <template>
     <div class="page_item" :class="page[2]">
         <div class="page">
-            <div class="header margin_auto">
-                <img src="../assets/xianquan.png">
+            <div class="xianquan margin_auto">
             </div>
             <div class="heading margin_auto">
-                <img src="../assets/heading.png">
             </div>
-            <div class="card_cont margin_auto">
-                <div class="card_1 fade_in_3">
-                    <img src="../assets/card_1.png">
-                </div>
-                <div class="card_2 fade_in_6">
-                    <img src="../assets/card_2.png">
-                </div>
-                <div class="card_3 fade_in_9">
-                    <img src="../assets/card_3.png">
-                </div>
+            <div class="card_1 fade_in_3">
             </div>
-            <div class="hurt_deg_cont margin_auto  fade_in_12">
-                <img src="../assets/hurt_deg.png">
+            <div class="card_2 fade_in_6">
             </div>
-            <ul class="hurt_dot_cont  fade_in_12">
-                <li class="finger"><img src="../assets/finger.png"></li>
-                <li @click='score($index)' v-for="item in dot" track-by="$index" :class='dot[$index]'>
-                    <img v-if='("dot_empty")==(dot[$index])' src="../assets/dot_empty.png" height="49" width="30">
-                    <img v-else src="../assets/dot_fill.png" height="49" width="30">
+            <div class="card_3 fade_in_9">
+            </div>
+            <div class="hurt_deg hurt_deg_cont fade_in_12 margin_auto">
+            </div>
+            <ul class="hurt_dot_cont fade_in_9">
+                <li v-tap='score($index)' v-for="item in dot" track-by="$index" :class='dot[$index]'>
+                    <div v-if='("dot_empty")==(dot[$index])' height="49" width="30"></div>
+                    <div v-else height="49" width="30"></div>
                 </li>
             </ul>
-            <div  @click="next(2)" class="next_bt_cont">
-                <img src="../assets/next_bt.png">
+            <div class="finger"></div>
+            <div class="floder"></div>
+            <div  v-tap="next(2)" class="next_bt next_bt_cont">
             </div>
-        </div>
-        <div class="page_bottom_cont">
-            <img src="../assets/page_bottom.png">
+            <div class="page_bottom_cont page_bottom">
+            </div>
         </div>
     </div>
 </template>
@@ -124,15 +115,26 @@ export default {
 }
 .finger {
     position: absolute;
-    left: x_size(205);
-    bottom: y_size(400);
-    width: 25px;
-    height: 30px;
+    left: x_size(185);
+    bottom: 24%;
+    opacity: 0;
+    filter: alpha(opacity=0);
 }
+.page_item .finger {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 9.99868%;
+  width: 6.4375%;
+  height: 8.18662%;
+  background-size: 739.53488% 10612.90323%; }
+.page_item .heading {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 13.99005%;
+  width: 85.3125%;
+  height: 8.97887%;
+  background-size: 116.48352% 9676.47059%; }
 .heading {
-    width: x_size(546);
-    height: y_size(102);
-    padding-top: y_size(32);
+    margin-top: 12px;
+    margin-bottom: 6px;
 }
 .floder_cont,
 .next_bt_cont {
@@ -146,18 +148,26 @@ export default {
 .card_1,.card_2,.card_3 {
     display: inline-block;
 }
-.card_1 {
-    width: x_size(259);
-    height: y_size(152);
-}
-.card_2 {
-    width: x_size(285);
-    height: y_size(158);
-}
-.card_3 {
-    width: x_size(560);
-    height: y_size(272);
-}
+.page_item .card_1 {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 26.8639%;
+  width: 40.46875%;
+  height: 13.29225%;
+  margin-left: x_size(46);
+  background-size: 245.55985% 6536.42384%; }
+.page_item .card_2 {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 28.42379%;
+  width: 44.53125%;
+  height: 13.82042%;
+  background-size: 223.15789% 6286.6242%; }
+.page_item .card_3 {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 67.34205%;
+  width: 83.28125%;
+  height: 23.85563%;
+  margin-left: x_size(56);
+  background-size: 119.32458% 3642.06642%; }
 .current {
     .finger {
         -webkit-animation: finger_translateY 1s linear 1.2s 4;
@@ -185,7 +195,9 @@ export default {
 @keyframes finger_translateY {
     0% { 
         -webkit-transform: translateY(0); 
-                transform: translateY(0)
+                transform: translateY(0);
+                opacity: 1;
+        filter: alpha(opacity=1);
     }
     100% { 
         opacity: 0;
