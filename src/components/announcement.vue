@@ -15,8 +15,6 @@
             </div>
             <ul class="hurt_dot_cont fade_in_9">
                 <li v-tap='score($index)' v-for="item in dot" track-by="$index" :class='dot[$index]'>
-                    <div v-if='("dot_empty")==(dot[$index])' height="49" width="30"></div>
-                    <div v-else height="49" width="30"></div>
                 </li>
             </ul>
             <div class="floder"></div>

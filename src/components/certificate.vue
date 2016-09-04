@@ -69,7 +69,6 @@ export default {
 @media screen and (min-width: 320px) {
     .main .page_item span {
     	font-size: 50%;
-    	line-height:2.2em;
     }
     .main .text{
 		font-size: .8rem;
@@ -78,7 +77,6 @@ export default {
 @media screen and (max-height: 320px) {
     .main .page_item span {
     	font-size: 50%;
-    	line-height:1.8em;
     }
     .main .text{
 		font-size: .8rem;
@@ -87,7 +85,6 @@ export default {
 @media screen and (min-width: 568px) and (min-height: 500px) {
     .main .page_item span {
     	font-size: 80%;
-    	line-height:1.5em;
     }
     .main .text{
 		font-size: 1.5rem;
@@ -96,7 +93,6 @@ export default {
 @media screen and (min-width: 600px) and (min-height: 700px) {
     .main .page_item span {
     	font-size: 60%;
-    	line-height:2.2em;
     }
     .main .text{
 		font-size: 1.5rem;
@@ -105,7 +101,6 @@ export default {
 @media screen and (min-width: 800px) and (min-height: 800px) {
     .main .page_item span {
     	font-size: 60%;
-    	line-height:2.7em;
     }
     .main .text{
 		font-size: 1.5rem;
@@ -114,7 +109,6 @@ export default {
 @media screen and (max-height: 500px) {
     .main .page_item span {
     	font-size: 40%;
-    	line-height:2.3em;
     }
 }
 .page {
@@ -159,13 +153,13 @@ export default {
   height: 14.61268%;
   background-size: 378.57143% 5945.78313%; }
 .yinzhang_cont {
-	top: y_size(791);
+	top: y_size(751);
 	left: x_size(879);
 }
 .l_hurt_cont,.m_hurt_cont,.h_hurt_cont {
 	width: x_size(246);
 	height: y_size(76);
-	top: y_size(394);
+	top: y_size(374);
 	left: x_size(197);
 	text-align: center;
 	font-weight: bold;
@@ -250,7 +244,7 @@ export default {
 		filter: alpha(opacity=0);
     }
     100% {
-		top: y_size(561);
+		top: y_size(551);
 		left: x_size(379);
 		opacity: 1;
 		filter: alpha(opacity=1);
@@ -268,7 +262,7 @@ export default {
 		filter: alpha(opacity=0);
     }
     100% {
-		top: y_size(561);
+		top: y_size(551);
 		left: x_size(379);
 		opacity: 1;
 		filter: alpha(opacity=1);
@@ -288,10 +282,16 @@ export default {
 	    @include eliminate_flash;
 	}
 	span {
-		display: inline-block;
-		width: 4em;
-		font-size: 50%;
-		line-height:1.6em;
+        display: inline-block;
+        vertical-align: middle;
+        width: 4em;
+        font-size: 40%;
+        width: 100%;  
+        height: 50%; 
+        line-height: 100%; 
+        margin: auto;  
+        position: absolute;  
+        top: 0; left: 0; bottom: 0; right: 0;
 		white-space: nowrap;
 		overflow: hidden;
 		border-right: .05em solid transparent;

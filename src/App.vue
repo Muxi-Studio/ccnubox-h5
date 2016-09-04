@@ -184,10 +184,12 @@ eliminate animation flash screen
 .page_item .dot_empty {
   background-image: url(./assets/sprite.png);
   background-position: 0px 0.80041%;
+  background-origin: content-box;
   background-size: 2120% 20142.85714%; }
 .page_item .dot_fill {
   background-image: url(./assets/sprite.png);
   background-position: 0px 1.29686%;
+  background-origin: content-box;
   background-size: 2120% 20142.85714%; }
 .hurt_dot_cont {
     height: y_size(49);
@@ -200,9 +202,8 @@ eliminate animation flash screen
     li {
         width: x_size(30);
         height: 100%;
-        margin-right: x_size(25);
+        padding-right: x_size(25);
         display: inline-block;
-        background-size: 100% 100%;
     }
     li:first-child {
         margin-left: x_size(25);
