@@ -116,7 +116,7 @@ export default {
 .finger {
     position: absolute;
     left: x_size(185);
-    bottom: 20%;
+    bottom: 12%;
     opacity: 0;
     filter: alpha(opacity=0);
 }
@@ -188,8 +188,8 @@ export default {
     100% { 
         opacity: 0;
         filter: alpha(opacity=0);
-        -webkit-transform: translateY(30px);
-                transform: translateY(30px)
+        -webkit-transform: translateY(20px);
+                transform: translateY(20px)
     }
 }
 @keyframes finger_translateY {
@@ -202,8 +202,8 @@ export default {
     100% { 
         opacity: 0;
         filter: alpha(opacity=0);
-        -webkit-transform: translateY(30px);
-                transform: translateY(30px)
+        -webkit-transform: translateY(20px);
+                transform: translateY(20px)
     }
 }
 </style>

@@ -2,8 +2,6 @@
 	<div v-load="loading" class="page_item" :class="page[0]">
 		<div class="body_cont body">
 		</div>
-		<div class="hand_cont hand">
-		</div>
 		<div class="hp_cont hp_empty">
 		</div>
 		<div class="hp_bg">
@@ -85,18 +83,12 @@ export default {
   width: 35.625%;
   height: 4.31338%;
   background-size: 278.94737% 20142.85714%; }
-.page_item .hand {
-  background-image: url(../assets/sprite.png);
-  background-position: 0px 3.33333%;
-  width: 20.15625%;
-  height: 5.19366%;
-  background-size: 493.02326% 16728.81356%; }
 .page_item .body {
-  background-image: url(../assets/sprite.png);
-  background-position: 0px 37.49838%;
+  background-image: url(../assets/loading.gif);
+  background-position: 50% 10%;
   width: 51.71875%;
   height: 16.28521%;
-  background-size: 192.14502% 5335.13514%; }
+  background-size: 130% 130%; }
 .body_cont,
 .hand_cont,
 .hp_cont,

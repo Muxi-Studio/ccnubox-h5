@@ -159,13 +159,13 @@ export default {
   height: 14.61268%;
   background-size: 378.57143% 5945.78313%; }
 .yinzhang_cont {
-	top: y_size(751);
+	top: y_size(791);
 	left: x_size(879);
 }
 .l_hurt_cont,.m_hurt_cont,.h_hurt_cont {
 	width: x_size(246);
 	height: y_size(76);
-	top: y_size(374);
+	top: y_size(394);
 	left: x_size(197);
 	text-align: center;
 	font-weight: bold;
@@ -250,7 +250,7 @@ export default {
 		filter: alpha(opacity=0);
     }
     100% {
-		top: y_size(551);
+		top: y_size(561);
 		left: x_size(379);
 		opacity: 1;
 		filter: alpha(opacity=1);
@@ -268,7 +268,7 @@ export default {
 		filter: alpha(opacity=0);
     }
     100% {
-		top: y_size(551);
+		top: y_size(561);
 		left: x_size(379);
 		opacity: 1;
 		filter: alpha(opacity=1);

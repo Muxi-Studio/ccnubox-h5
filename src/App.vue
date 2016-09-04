@@ -176,7 +176,7 @@ eliminate animation flash screen
   background-size: 276.52174% 18277.77778%; }
 
 .hurt_deg_cont {
-    margin-top: y_size(22);
+    margin-top: y_size(42);
     margin-bottom: y_size(9);
     opacity: 0;
     filter: alpha(opacity=0);
@@ -191,6 +191,7 @@ eliminate animation flash screen
   background-size: 2120% 20142.85714%; }
 .hurt_dot_cont {
     height: y_size(49);
+    padding-top: y_size(21);
     padding-bottom: y_size(61);
     font-size: 0;
     text-align: center;
