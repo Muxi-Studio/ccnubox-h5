@@ -1,0 +1,395 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+.page_item .mdc_2 {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 0%;
+  width: 9.375%;
+  height: 3.25704%;
+  background-size: 1060% 26727.02703%; }
+.page_item .mdc_1 {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 0.37415%;
+  width: 8.4375%;
+  height: 3.69718%;
+  background-size: 1177.77778% 23545.2381%; }
+.page_item .dot_fill {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 0.79887%;
+  width: 4.6875%;
+  height: 4.31338%;
+  background-size: 2120% 20181.63265%; }
+.page_item .dot_empty {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 1.29437%;
+  width: 4.6875%;
+  height: 4.31338%;
+  background-size: 2120% 20181.63265%; }
+.page_item .hp_empty {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 1.78987%;
+  width: 46.71875%;
+  height: 4.31338%;
+  background-size: 212.70903% 20181.63265%; }
+.page_item .hp_fill {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 2.28537%;
+  width: 35.625%;
+  height: 4.31338%;
+  background-size: 278.94737% 20181.63265%; }
+.page_item .hurt_deg {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 2.78087%;
+  width: 35.9375%;
+  height: 4.75352%;
+  background-size: 276.52174% 18312.96296%; }
+.page_item .next_bt {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 3.32693%;
+  width: 23.90625%;
+  height: 5.98592%;
+  background-size: 415.68627% 14542.64706%; }
+.page_item .desc {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 4.01456%;
+  width: 68.125%;
+  height: 5.98592%;
+  background-size: 145.87156% 14542.64706%; }
+.page_item .sword_2 {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 4.70219%;
+  width: 16.5625%;
+  height: 6.07394%;
+  background-size: 600% 14331.88406%; }
+.page_item .m_hurt {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 5.39994%;
+  width: 38.4375%;
+  height: 6.69014%;
+  background-size: 258.53659% 13011.84211%; }
+.page_item .l_hurt {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 6.16847%;
+  width: 38.4375%;
+  height: 6.69014%;
+  background-size: 258.53659% 13011.84211%; }
+.page_item .h_hurt {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 6.937%;
+  width: 38.4375%;
+  height: 6.69014%;
+  background-size: 258.53659% 13011.84211%; }
+.page_item .xianquan {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 7.70553%;
+  width: 76.5625%;
+  height: 6.69014%;
+  background-size: 129.79592% 13011.84211%; }
+.page_item .page_bottom {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 8.47406%;
+  width: 99.375%;
+  height: 7.04225%;
+  background-size: 100% 12361.25%; }
+.page_item .download {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 9.28304%;
+  width: 27.5%;
+  height: 7.13028%;
+  background-size: 361.36364% 12208.64198%; }
+.page_item .finger {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 10.10213%;
+  width: 13.4375%;
+  height: 8.18662%;
+  background-size: 739.53488% 10633.33333%; }
+.page_item .sword_1 {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 11.04257%;
+  width: 10.3125%;
+  height: 8.27465%;
+  background-size: 963.63636% 10520.21277%; }
+.page_item .advice {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 11.99312%;
+  width: 60.625%;
+  height: 8.89085%;
+  background-size: 163.91753% 9791.08911%; }
+.page_item .heading {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 13.01446%;
+  width: 85.3125%;
+  height: 8.97887%;
+  background-size: 116.48352% 9695.09804%; }
+.page_item .department_heading {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 14.04591%;
+  width: 85.3125%;
+  height: 8.97887%;
+  background-size: 116.48352% 9695.09804%; }
+.page_item .electric_heading {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 15.07736%;
+  width: 85.3125%;
+  height: 8.97887%;
+  background-size: 116.48352% 9695.09804%; }
+.page_item .lib_heading {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 16.10881%;
+  width: 85.3125%;
+  height: 8.97887%;
+  background-size: 116.48352% 9695.09804%; }
+.page_item .course_heading {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 17.14026%;
+  width: 85.3125%;
+  height: 8.97887%;
+  background-size: 116.48352% 9695.09804%; }
+.page_item .ance_heading {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 18.17171%;
+  width: 85.3125%;
+  height: 8.97887%;
+  background-size: 116.48352% 9695.09804%; }
+.page_item .grade_heading {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 19.20316%;
+  width: 85.3125%;
+  height: 8.97887%;
+  background-size: 116.48352% 9695.09804%; }
+.page_item .enter {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 20.2346%;
+  width: 42.1875%;
+  height: 9.15493%;
+  background-size: 235.55556% 9508.65385%; }
+.page_item .floder {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 21.28628%;
+  width: 32.34375%;
+  height: 11.17958%;
+  background-size: 307.24638% 7786.61417%; }
+.page_item .page_border {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 22.57053%;
+  width: 93.90625%;
+  height: 11.17958%;
+  background-size: 105.82363% 7786.61417%; }
+.page_item .knife {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 23.85479%;
+  width: 18.59375%;
+  height: 11.53169%;
+  background-size: 534.45378% 7548.85496%; }
+.page_item .electric_2 {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 25.17949%;
+  width: 47.65625%;
+  height: 12.58803%;
+  background-size: 208.52459% 6915.38462%; }
+.page_item .card_1 {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 26.62554%;
+  width: 40.46875%;
+  height: 13.29225%;
+  background-size: 245.55985% 6549.00662%; }
+.page_item .card_2 {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 28.15249%;
+  width: 44.53125%;
+  height: 13.82042%;
+  background-size: 223.15789% 6298.72611%; }
+.page_item .yinzhang {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 29.74012%;
+  width: 26.25%;
+  height: 14.61268%;
+  background-size: 378.57143% 5957.22892%; }
+.page_item .lib_1 {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 31.41875%;
+  width: 84.0625%;
+  height: 15.75704%;
+  background-size: 118.21561% 5524.58101%; }
+.page_item .idont {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 33.22884%;
+  width: 72.03125%;
+  height: 16.19718%;
+  background-size: 137.96095% 5374.45652%; }
+.page_item .department_3 {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 35.08949%;
+  width: 33.125%;
+  height: 16.19718%;
+  background-size: 300% 5374.45652%; }
+.page_item .grade_2 {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 36.95015%;
+  width: 37.96875%;
+  height: 16.46127%;
+  background-size: 261.7284% 5288.23529%; }
+.page_item .department_2 {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 38.84114%;
+  width: 51.40625%;
+  height: 16.63732%;
+  background-size: 193.31307% 5232.27513%; }
+.page_item .grade_1 {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 40.75235%;
+  width: 47.34375%;
+  height: 17.07746%;
+  background-size: 209.90099% 5097.42268%; }
+.page_item .logo {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 42.71413%;
+  width: 31.25%;
+  height: 17.60563%;
+  background-size: 318% 4944.5%; }
+.page_item .ance_1 {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 44.73658%;
+  width: 85.46875%;
+  height: 18.22183%;
+  background-size: 116.27057% 4777.29469%; }
+.page_item .mdc_can {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 46.82981%;
+  width: 62.5%;
+  height: 18.48592%;
+  background-size: 159% 4709.04762%; }
+.page_item .ance_2 {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 48.95338%;
+  width: 85%;
+  height: 18.75%;
+  background-size: 116.91176% 4642.723%; }
+.page_item .qr_code {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 51.10729%;
+  width: 77.5%;
+  height: 19.3662%;
+  background-size: 128.22581% 4495%; }
+.page_item .grade_3 {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 53.33199%;
+  width: 83.4375%;
+  height: 20.33451%;
+  background-size: 119.10112% 4280.95238%; }
+.page_item .lib_2 {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 55.66791%;
+  width: 38.90625%;
+  height: 20.33451%;
+  background-size: 255.42169% 4280.95238%; }
+.page_item .department_1 {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 58.00384%;
+  width: 84.84375%;
+  height: 21.47887%;
+  background-size: 117.12707% 4052.86885%; }
+.page_item .lib_3 {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 60.47123%;
+  width: 42.03125%;
+  height: 21.5669%;
+  background-size: 236.43123% 4036.32653%; }
+.page_item .electric_3 {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 62.94873%;
+  width: 51.25%;
+  height: 23.15141%;
+  background-size: 193.90244% 3760.07605%; }
+.page_item .card_3 {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 65.60825%;
+  width: 83.28125%;
+  height: 23.85563%;
+  background-size: 119.32458% 3649.07749%; }
+.page_item .xiazi {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 68.34867%;
+  width: 86.5625%;
+  height: 28.69718%;
+  background-size: 114.80144% 3033.43558%; }
+.page_item .electric_1 {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 71.64526%;
+  width: 35.3125%;
+  height: 36.8838%;
+  background-size: 281.41593% 2360.1432%; }
+.page_item .course_2 {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 75.88229%;
+  width: 47.34375%;
+  height: 37.76408%;
+  background-size: 209.90099% 2305.12821%; }
+.page_item .course_1 {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 80.22045%;
+  width: 37.34375%;
+  height: 37.76408%;
+  background-size: 266.10879% 2305.12821%; }
+.page_item .card_cont {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 84.5586%;
+  width: 84.53125%;
+  height: 38.64437%;
+  background-size: 117.56007% 2252.61959%; }
+.page_item .test {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 88.99788%;
+  width: 90.46875%;
+  height: 46.30282%;
+  background-size: 109.84456% 1880.03802%; }
+.page_item .form {
+  background-image: url(../assets/sprite.png);
+  background-position: 0px 94.31692%;
+  width: 77.96875%;
+  height: 49.47183%;
+  background-size: 127.45491% 1759.60854%; }
+
+/*# sourceMappingURL=index.css.map */
