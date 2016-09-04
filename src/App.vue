@@ -87,6 +87,9 @@ p {
     margin-top:0;
     margin-bottom:0;
 }
+a {
+    outline: none;
+}
 ul {
     padding: 0;
     margin: 0;
@@ -118,6 +121,7 @@ eliminate animation flash screen
   background-position: 0px 7.59813%;
   width: 76.5625%;
   height: 6.69014%;
+  margin-bottom: y_size(210);
   background-size: 129.79592% 12986.84211%; }
 .page_item .page_bottom {
   background-image: url(./assets/sprite.png);
@@ -156,8 +160,8 @@ eliminate animation flash screen
 .page_item .next_bt {
   background-image: url(./assets/sprite.png);
   background-position: 0px 3.9911%;
-  width: 23.90625%;
-  height: 5.98592%;
+  width: 30.90625%;
+  height: 8.28592%;
   background-size: 415.68627% 14514.70588%; }
 .next_bt {
     position: absolute;

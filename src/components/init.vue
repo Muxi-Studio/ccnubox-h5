@@ -106,7 +106,7 @@ export default {
 }
 .body_cont {
     left: x_size(150);
-    top: y_size(254);
+    top: y_size(324);
     -webkit-animation: body_scale .2s linear infinite;
             animation: body_scale .2s linear infinite;
     -webkit-transform-origin: left top;
@@ -116,7 +116,7 @@ export default {
 }
 .hand_cont {
     left: x_size(267);
-    top: y_size(362);
+    top: y_size(432);
     -webkit-animation: hand_rotateZ .2s linear infinite;
             animation: hand_rotateZ .2s linear infinite;
     -webkit-transform-origin: left top;
@@ -126,7 +126,7 @@ export default {
 }
 .hp_cont {
     left: x_size(169);
-    top: y_size(462);
+    top: y_size(542);
 }
 .hp_bg {
     .bg {
@@ -142,7 +142,7 @@ export default {
     width: x_size(228);
     height: y_size(42);
     right: x_size(170);
-    top: y_size(464);
+    top: y_size(544);
 }
 .hp_cont {
     z-index: 300;
@@ -157,12 +157,12 @@ export default {
     0% {
         -webkit-transform:rotateZ(-60deg);
                 transform:rotateZ(-60deg);
-        top: y_size(383);
+        top: y_size(443);
     }
     75% {
         -webkit-transform:rotateZ(-40deg);
                 transform:rotateZ(-40deg);
-        top: y_size(378);
+        top: y_size(448);
     }
     100% {
         -webkit-transform:rotateZ(0deg);
@@ -173,12 +173,12 @@ export default {
     0% {
         -webkit-transform:rotateZ(-60deg);
                 transform:rotateZ(-60deg);
-        top: y_size(383);
+        top: y_size(443);
     }
     75% {
         -webkit-transform:rotateZ(-40deg);
                 transform:rotateZ(-40deg);
-        top: y_size(378);
+        top: y_size(448);
     }
     100% {
         -webkit-transform:rotateZ(0deg);

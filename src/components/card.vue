@@ -116,7 +116,7 @@ export default {
 .finger {
     position: absolute;
     left: x_size(185);
-    bottom: 22%;
+    bottom: 20%;
     opacity: 0;
     filter: alpha(opacity=0);
 }

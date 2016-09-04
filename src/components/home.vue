@@ -2,7 +2,7 @@
   	<div class="page_item" :class="page[1]">
   		<div class="header margin_auto xianquan">
 		</div>
-		<div class="test">
+		<div class="test margin_auto">
 		</div>
 		<div class="sword_1">
 		</div>
@@ -62,11 +62,9 @@ export default {
   background-position: 0px 93.9500%;
   width: 90.46875%;
   height: 46.30282%;
-  margin-left: x_size(21);
-  background-size: 109.84456% 1876.42586%; }
-.test {
-     padding-left: x_size(21);
-}
+  margin-top: y_size(210);
+  background-size: 109.84456% 1876.42586%; 
+  }
 .page_item .sword_1 {
   background-image: url(../assets/sprite.png);
   background-position: 0px 10.94093%;
@@ -84,7 +82,7 @@ export default {
   height: 6.07394%;
   background-size: 600% 14304.34783%; }
 .sword_2 {
-    top: y_size(296);
+    top: y_size(208);
     left: x_size(-406); 
 }
 .page_item .knife {
@@ -94,8 +92,8 @@ export default {
   height: 11.53169%;
   background-size: 534.45378% 7534.35115%; }
 .knife {
-    top: y_size(395);
-    left: x_size(414);
+    top: y_size(505);
+    left: x_size(404);
 }
 .page_item .enter {
   background-image: url(../assets/sprite.png);
@@ -129,7 +127,7 @@ export default {
                 transform: rotate(180deg);
     }
     100% {
-        top: y_size(395);
+        top: y_size(605);
         left: x_size(414);
         -webkit-transform: rotate(0);
                 transform: rotate(0);
@@ -149,7 +147,7 @@ export default {
                 transform: rotate(180deg);
     }
     100% {
-        top: y_size(395);
+        top: y_size(605);
         left: x_size(414);
         -webkit-transform: rotate(0);
                 transform: rotate(0);
@@ -160,10 +158,6 @@ export default {
         top: y_size(2038);
         left: x_size(806);
     }
-    60% {
-        top: y_size(38);
-        left: x_size(338);
-    }
     70% {
         -webkit-transform:rotateZ(-10deg);
                 transform:rotateZ(-10deg);
@@ -175,7 +169,7 @@ export default {
     100% {
         -webkit-transform:rotateZ(0);
                 transform:rotateZ(0);
-        top: y_size(98);
+        top: y_size(208);
         left: x_size(359);
     }
 }
@@ -184,10 +178,6 @@ export default {
         top: y_size(2038);
         left: x_size(806);
     }
-    60% {
-        top: y_size(38);
-        left: x_size(338);
-    }
     70% {
         -webkit-transform:rotateZ(-10deg);
                 transform:rotateZ(-10deg);
@@ -199,7 +189,7 @@ export default {
     100% {
         -webkit-transform:rotateZ(0);
                 transform:rotateZ(0);
-        top: y_size(98);
+        top: y_size(208);
         left: x_size(359);
     }
 }
@@ -219,7 +209,7 @@ export default {
         left: x_size(-406);
     }
     100% {
-        top: y_size(316);
+        top: y_size(418);
         left: x_size(38);
     }
 }

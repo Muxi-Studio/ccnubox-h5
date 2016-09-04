@@ -122,7 +122,7 @@ export default {
 }
 .page_item .l_hurt_cont {
   background-image: url(../assets/sprite.png);
-  background-position: 0px 6.81812%;
+  background-position: 0px 6.81212%;
   background-size: 258.53659% 12986.84211%; }
 .page_item .m_hurt_cont {
   background-image: url(../assets/sprite.png);
@@ -159,13 +159,13 @@ export default {
   height: 14.61268%;
   background-size: 378.57143% 5945.78313%; }
 .yinzhang_cont {
-	top: y_size(661);
+	top: y_size(711);
 	left: x_size(879);
 }
 .l_hurt_cont,.m_hurt_cont,.h_hurt_cont {
 	width: x_size(246);
 	height: y_size(76);
-	top: y_size(274);
+	top: y_size(334);
 	left: x_size(197);
 	text-align: center;
 	font-weight: bold;
@@ -175,7 +175,7 @@ export default {
 .text {
 	width: x_size(389);
 	height: y_size(102);
-	top: y_size(387);
+	top: y_size(447);
 	left: x_size(136);
 	line-height: 1.2;
 	font-size: 1rem;
@@ -240,7 +240,7 @@ export default {
 }
 @-webkit-keyframes yinzhang_in {
     0% {
-		top: y_size(661);
+		top: y_size(711);
 		left: x_size(879);
 		opacity: 0;
 		filter: alpha(opacity=0);
@@ -250,7 +250,7 @@ export default {
 		filter: alpha(opacity=0);
     }
     100% {
-		top: y_size(461);
+		top: y_size(511);
 		left: x_size(379);
 		opacity: 1;
 		filter: alpha(opacity=1);
@@ -258,7 +258,7 @@ export default {
 }
 @keyframes yinzhang_in {
     0% {
-		top: y_size(661);
+		top: y_size(711);
 		left: x_size(879);
 		opacity: 0;
 		filter: alpha(opacity=0);
@@ -268,7 +268,7 @@ export default {
 		filter: alpha(opacity=0);
     }
     100% {
-		top: y_size(461);
+		top: y_size(511);
 		left: x_size(379);
 		opacity: 1;
 		filter: alpha(opacity=1);
