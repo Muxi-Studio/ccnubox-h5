@@ -106,7 +106,7 @@ export default {
 }
 .page_item .lib_heading {
   background-image: url(../assets/sprite.png);
-  background-position: 0px 19.19722%;
+  background-position: 0px 19.2122%;
   width: 85.3125%;
   height: 8.97887%;
   margin-top: y_size(32);
